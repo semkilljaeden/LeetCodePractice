@@ -2,10 +2,10 @@ import java.util.Arrays;
 import java.util.stream.IntStream;
 
 /***
- * untime: 2 ms 93.11%
+ * runtime: 2 ms 93.11%
  * Memory Usage: 39.6 MB  38.88%
  */
-public class Q10_RegularExpressionDP {
+public class Q10_RegularExpressionV3DP {
     public boolean isMatch(String s, String p) {
         int[][] memo = new int[s.length() + 1][p.length() + 1];
         IntStream.range(0, memo.length).forEach(i -> Arrays.fill(memo[i], 0));

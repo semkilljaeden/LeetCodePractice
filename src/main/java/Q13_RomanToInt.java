@@ -3,7 +3,7 @@
  * Memory Usage: 39.1 MB  98.68%
  */
 
-class Solution {
+class RomanToInt {
     public int romanToInt(String s) {
         int result = 0;
         int previous = convert(s.charAt(0));

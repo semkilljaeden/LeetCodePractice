@@ -2,7 +2,7 @@
  * Runtime: 0 ms, faster than 100.00% of Java online submissions for Swap Nodes in Pairs. Medium
  * Memory Usage: 37.1 MB, less than 54.57% of Java online submissions for Swap Nodes in Pairs.
  */
-public class Q25_SwapNodes {
+public class Q24_SwapNodes {
     public ListNode swapPairs(ListNode head) {
         if(head == null || head.next == null) {
             return head;

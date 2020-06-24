@@ -10,7 +10,7 @@ import java.util.LinkedList;
 //Remember JAVA object comparison use equals!!!
 
 
-public class Q26_ReverseNodeInKGroup {
+public class Q25_ReverseNodeInKGroup {
     public ListNode reverseKGroup(ListNode head, int k) {
         ListNode tail = head;
         if(tail == null) {

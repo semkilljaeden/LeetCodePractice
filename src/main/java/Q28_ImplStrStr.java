@@ -4,7 +4,7 @@
  * Memory Usage: 38.3 MB, less than 44.13% of Java online submissions for Implement strStr().
  *
  *
- * Substring comparison is much faster than charAt iteration since the former once need to cast byte to char everytime
+ * Substring comparison is much faster than charAt iteration since the latter need to cast byte to char everytime
  * and check boundary, the latter compare byte[] and bounday check for only once.
  */
 public class Q28_ImplStrStr {

@@ -1,15 +1,9 @@
-import java.util.ArrayList;
-import java.util.List;
-
 /***
- * 2hr went into the wrong direction.
- *
- * A graph with direction can use DP,  -> the path you come from does not affect the path you will go
- * A graph without direction cannot use DP. the path you come from affects the path you will go. the coming way cannot be
- * memorized
- *
+ * 38mins
+ * Runtime: 0 ms, faster than 100.00% of Java online submissions for Remove Duplicates from Sorted Array II.
+ * Memory Usage: 39.9 MB, less than 31.97% of Java online submissions for Remove Duplicates from Sorted Array II.
  */
-public class Q79_WordSearch {
+public class Q80_RemoveDuplicatesFromSortedArrayII {
     char[][] board;
     String word;
     public boolean exist(char[][] board, String word) {

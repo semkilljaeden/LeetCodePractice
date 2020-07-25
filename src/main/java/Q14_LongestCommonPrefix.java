@@ -4,7 +4,7 @@
  * 37.5 MB, less than 68.57%
  */
 
-class LongestCommonPrefix {
+class Q14_LongestCommonPrefix {
     public String longestCommonPrefix(String[] strs) {
         if(strs == null || strs.length == 0) {
             return "";

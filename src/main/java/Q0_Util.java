@@ -17,3 +17,14 @@ class TreeNode {
         this.right = right;
     }
 }
+
+class Node {
+    char c;
+    Node left = null;
+    Node right = null;
+    int level = 0;
+    public boolean isMatch(char s) {
+
+        return c == '.' ? true : c == s;
+    }
+}

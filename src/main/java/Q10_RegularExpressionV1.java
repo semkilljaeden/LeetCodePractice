@@ -50,14 +50,3 @@ public class Q10_RegularExpressionV1 {
                 || (root.left != null && check(root.right, s, index));
     }
 }
-
-class Node {
-    char c;
-    Node left = null;
-    Node right = null;
-    int level = 0;
-    public boolean isMatch(char s) {
-
-        return c == '.' ? true : c == s;
-    }
-}

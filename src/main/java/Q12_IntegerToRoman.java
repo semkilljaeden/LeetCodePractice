@@ -3,7 +3,7 @@
  * 39.3 MB 60.52%
  */
 
-class Solution {
+class Q12_IntegerToRoman {
     public String intToRoman(int num) {
         char[] result = new char[16];
         int tmp;

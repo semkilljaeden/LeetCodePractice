@@ -3,7 +3,7 @@
  * Memory Usage: 39.1 MB  98.68%
  */
 
-class RomanToInt {
+class Q13_RomanToInt {
     public int romanToInt(String s) {
         int result = 0;
         int previous = convert(s.charAt(0));

@@ -7,7 +7,7 @@ import java.util.Deque;
  * Memory Usage: 39.9 MB, less than 81.13% of Java online submissions for Asteroid Collision.
  * Next challenges:
  */
-public class Q_AsteroidCollision {
+public class Q735_AsteroidCollision {
     public int[] asteroidCollision(int[] a) {
         if(a.length == 0) {
             return null;

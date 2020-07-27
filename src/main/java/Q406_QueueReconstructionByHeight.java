@@ -6,7 +6,7 @@ import java.util.Arrays;
  * Runtime: 6 ms, faster than 86.32% of Java online submissions for Queue Reconstruction by Height.
  * Memory Usage: 40.7 MB, less than 11.03% of Java online submissions for Queue Reconstruction by Height.
  */
-public class QueueReconstructionByHeight {
+public class Q406_QueueReconstructionByHeight {
     public int[][] reconstructQueue(int[][] people) {
         Arrays.sort(people, (o1, o2) -> {
             if(o1[0] == o2[0]) {

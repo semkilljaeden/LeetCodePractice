@@ -1,2 +1,5 @@
 # Project exclude paths
 /.gradle/
+/LeetCodePractice/ConsoleApplication1/Debug
+/.vs
+/LeetCodePractice/.vs/LeetCodePractice/v16

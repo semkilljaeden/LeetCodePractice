@@ -20,6 +20,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GraphNode.cpp" />
+    <ClCompile Include="ListNode.cpp" />
+    <ClCompile Include="NodeRandom.cpp" />
     <ClCompile Include="Q128_LongestConsecutiveSequence.cpp" />
     <ClCompile Include="Q129_SumRootToLeafNumbers.cpp" />
     <ClCompile Include="Q126_WordLadderII.cpp" />
@@ -40,6 +42,16 @@
     <ClCompile Include="Q132_Palindrome_Partitioning_II.cpp" />
     <ClCompile Include="Q133_CloneGraph.cpp" />
     <ClCompile Include="Q134_GasStation.cpp" />
+    <ClCompile Include="Q135_Candy.cpp" />
+    <ClCompile Include="Q136_SingleNumber.cpp" />
+    <ClCompile Include="Q137_SingleNumberII.cpp" />
+    <ClCompile Include="Q138_CopyListWithRandomPointer.cpp" />
+    <ClCompile Include="Q140_WordBreakII.cpp" />
+    <ClCompile Include="Q142_LinkedListCycleII.cpp" />
+    <ClCompile Include="Q144_BinaryTreePreorderTraversal.cpp" />
+    <ClCompile Include="Q145_BinaryTreePostorderTraversal.cpp" />
+    <ClCompile Include="Q147_InsertionSortList.cpp" />
+    <ClCompile Include="Q148_SortList.cpp" />
     <ClCompile Include="TreeNode.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

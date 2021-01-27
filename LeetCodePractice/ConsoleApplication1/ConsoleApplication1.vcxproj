@@ -52,6 +52,15 @@
     <ClCompile Include="Q145_BinaryTreePostorderTraversal.cpp" />
     <ClCompile Include="Q147_InsertionSortList.cpp" />
     <ClCompile Include="Q148_SortList.cpp" />
+    <ClCompile Include="Q149_MaxPointsOnALine.cpp" />
+    <ClCompile Include="Q150_EvaluateReversePolishNotation.cpp" />
+    <ClCompile Include="Q151_ReverseWordsInAString.cpp" />
+    <ClCompile Include="Q154_FindMinimumInRotatedSortedArrayII.cpp" />
+    <ClCompile Include="Q156_BinaryTreeUpsideDown.cpp" />
+    <ClCompile Include="Q157_ReadNCharactersGivenRead4.cpp" />
+    <ClCompile Include="Q158_ReadNCharactersGivenRead4II.cpp" />
+    <ClCompile Include="Q159_LongestSubstringwit AtMostTwoDistinctCharacters.cpp" />
+    <ClCompile Include="Q_160IntersectionofTwoLinkedLists.cpp" />
     <ClCompile Include="TreeNode.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

@@ -120,5 +120,32 @@
     <ClCompile Include="Q148_SortList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Q150_EvaluateReversePolishNotation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Q151_ReverseWordsInAString.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Q154_FindMinimumInRotatedSortedArrayII.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Q149_MaxPointsOnALine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Q156_BinaryTreeUpsideDown.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Q157_ReadNCharactersGivenRead4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Q158_ReadNCharactersGivenRead4II.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Q159_LongestSubstringwit AtMostTwoDistinctCharacters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Q_160IntersectionofTwoLinkedLists.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

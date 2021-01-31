@@ -5,9 +5,9 @@
 Runtime: 0 ms, faster than 100.00% of C++ online submissions for Read N Characters Given Read4 II - Call multiple times.
 Memory Usage: 6.3 MB, less than 94.16% of C++ online submissions for Read N Characters Given Read4 II - Call multiple times.
 */
-int read4(char* b)
+static int read4(char* b)
 {
-
+    return 0;
 }
 class Solution {
 public:

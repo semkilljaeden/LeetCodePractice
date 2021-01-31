@@ -102,7 +102,7 @@ public:
 
 //TLE again, o(n^2k) more optimized
 
-class Solution {
+class Solution2 {
 public:
     using pr = pair<int, int>;
     int count = 0;
@@ -151,7 +151,7 @@ public:
 
 //TLE again, o(n^2k)???? yes, even though only n times of the function being run, but each run take O(kn) so overall is O(n^2k)
 
-class Solution2 {
+class Solution5 {
 public:
     using pr = pair<int, int>;
     int count = 0;
@@ -195,7 +195,7 @@ public:
 };
 //9:05 to 10:22 1:08 to 1:17 TLE
 
-class Solution {
+class Solution8 {
 public:
     using pr = pair<int, int>;
     int maxProfit(int k, vector<int>& prices) {

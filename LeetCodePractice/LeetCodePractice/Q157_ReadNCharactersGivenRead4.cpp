@@ -3,9 +3,9 @@
 //15 mins werid question
 //4mins, a better one
 
-int read4(char* b)
+static int read4(char* b)
 {
-
+    return 0;
 }
 
 class Solution {
@@ -40,7 +40,7 @@ public:
     }
 };
 
-class Solution {
+class Solution2 {
 public:
     /**
      * @param buf Destination buffer

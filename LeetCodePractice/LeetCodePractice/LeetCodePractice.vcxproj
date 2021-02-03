@@ -83,6 +83,11 @@
     <ClCompile Include="Q208_ImplementTrie.cpp" />
     <ClCompile Include="Q210_CourseScheduleII.cpp" />
     <ClCompile Include="Q211_DesignAddAndSearchWordsDataStructure.cpp" />
+    <ClCompile Include="Q212_WordSearchII.cpp" />
+    <ClCompile Include="Q213_HouseRobberII.cpp" />
+    <ClCompile Include="Q214_ShortestPalindrome.cpp" />
+    <ClCompile Include="Q216_CombinationSumIII.cpp" />
+    <ClCompile Include="Q217_ContainsDuplicate.cpp" />
     <ClCompile Include="TreeNode.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

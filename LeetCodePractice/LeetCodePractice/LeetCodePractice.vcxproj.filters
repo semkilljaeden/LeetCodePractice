@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Q128_LongestConsecutiveSequence.cpp" />
+    <ClCompile Include="Q129_SumRootToLeafNumbers.cpp" />
+    <ClCompile Include="Q126_WordLadderII.cpp" />
+    <ClCompile Include="Q115_DistinctSubSequences.cpp" />
+    <ClCompile Include="Q116_PopulatingNextRightPointersinEachNode.cpp" />
+    <ClCompile Include="Q117.PopulatingNextRightPointersinEachNodeII.cpp" />
+    <ClCompile Include="Q121_BestTimetoBuyandSellStock.cpp" />
+    <ClCompile Include="Q119_PascalTriangleII.cpp" />
+    <ClCompile Include="Q120_Triangle.cpp" />
+    <ClCompile Include="Q122_BestTimeToBuyAndSellStockII.cpp" />
+    <ClCompile Include="Q123_BestTimeToBuyAndSellStockIII.cpp" />
+    <ClCompile Include="Q125_ValidPalindrome.cpp" />
+    <ClCompile Include="Q126_WordLadderII_v1.cpp" />
+    <ClCompile Include="Q127_WordLadder.cpp" />
+    <ClCompile Include="Q130_SurroundedRegions.cpp" />
+    <ClCompile Include="Q131_Palindrome_Partitioning.cpp" />
+    <ClCompile Include="Q132_Palindrome_Partitioning_II.cpp" />
+    <ClCompile Include="Q133_CloneGraph.cpp" />
+    <ClCompile Include="Q134_GasStation.cpp" />
+    <ClCompile Include="Q135_Candy.cpp" />
+    <ClCompile Include="Q136_SingleNumber.cpp" />
+    <ClCompile Include="Q137_SingleNumberII.cpp" />
+    <ClCompile Include="Q138_CopyListWithRandomPointer.cpp" />
+    <ClCompile Include="Q140_WordBreakII.cpp" />
+    <ClCompile Include="Q142_LinkedListCycleII.cpp" />
+    <ClCompile Include="Q144_BinaryTreePreorderTraversal.cpp" />
+    <ClCompile Include="Q145_BinaryTreePostorderTraversal.cpp" />
+    <ClCompile Include="Q147_InsertionSortList.cpp" />
+    <ClCompile Include="Q148_SortList.cpp" />
+    <ClCompile Include="Q149_MaxPointsOnALine.cpp" />
+    <ClCompile Include="Q150_EvaluateReversePolishNotation.cpp" />
+    <ClCompile Include="Q151_ReverseWordsInAString.cpp" />
+    <ClCompile Include="Q154_FindMinimumInRotatedSortedArrayII.cpp" />
+    <ClCompile Include="Q156_BinaryTreeUpsideDown.cpp" />
+    <ClCompile Include="Q157_ReadNCharactersGivenRead4.cpp" />
+    <ClCompile Include="Q158_ReadNCharactersGivenRead4II.cpp" />
+    <ClCompile Include="Q159_LongestSubstringwit AtMostTwoDistinctCharacters.cpp" />
+    <ClCompile Include="Q160_IntersectionofTwoLinkedLists.cpp" />
+    <ClCompile Include="Q161_OneEditDistance.cpp" />
+    <ClCompile Include="Q163_MissingRanges.cpp" />
+    <ClCompile Include="Q164_MaximumGap.cpp" />
+    <ClCompile Include="Q165_CompareVersionNumbers.cpp" />
+    <ClCompile Include="Q167_TwoSumIIInputarrayissorted.cpp" />
+    <ClCompile Include="Q168_ExcelSheetColumnTitle.cpp" />
+    <ClCompile Include="Q169_MajorityElement.cpp" />
+    <ClCompile Include="Q170_TwoSumIIIDatastructuredesign.cpp" />
+    <ClCompile Include="Q171_ExcelSheetColumnNumber.cpp" />
+    <ClCompile Include="Q172_FactorialTrailingZeroes.cpp" />
+    <ClCompile Include="Q174_DungeonGame.cpp" />
+    <ClCompile Include="Q175_Combine_Two_Tables.cpp" />
+    <ClCompile Include="Q176_Second_Highest_Salary.cpp" />
+    <ClCompile Include="Q186_ReverseWordsinaStringII.cpp" />
+    <ClCompile Include="Q187_RepeatedDNASequences.cpp" />
+    <ClCompile Include="Q188_BestTimetoBuyandSellStockIV.cpp" />
+    <ClCompile Include="Q189_RotateArray.cpp" />
+    <ClCompile Include="Q190_Reverse_Bits.cpp" />
+    <ClCompile Include="Q191_Numberof1Bits.cpp" />
+    <ClCompile Include="Q192_WordFrequency.cpp" />
+    <ClCompile Include="Q198_HouseRobber.cpp" />
+    <ClCompile Include="Q201_BitwiseANDofNumbersRange.cpp" />
+    <ClCompile Include="Q202_HappyHour.cpp" />
+    <ClCompile Include="Q203_RemoveLinkedListElements.cpp" />
+    <ClCompile Include="Q204_CountPrimes.cpp" />
+    <ClCompile Include="Q205_IsomorphicStrings.cpp" />
+    <ClCompile Include="Q208_ImplementTrie.cpp" />
+    <ClCompile Include="Q210_CourseScheduleII.cpp" />
+    <ClCompile Include="Q211_DesignAddAndSearchWordsDataStructure.cpp" />
+    <ClCompile Include="GraphNode.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="ListNode.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Node.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="NodeRandom.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeNode.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Q213_HouseRobberII.cpp" />
+    <ClCompile Include="Q214_ShortestPalindrome.cpp" />
+    <ClCompile Include="Q216_CombinationSumIII.cpp" />
+    <ClCompile Include="Q217_ContainsDuplicate.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Utilities">
+      <UniqueIdentifier>{dbd961ad-4d62-47fc-92fa-46ce85875d64}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

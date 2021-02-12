@@ -90,6 +90,32 @@
     <ClCompile Include="Q214_ShortestPalindrome.cpp" />
     <ClCompile Include="Q216_CombinationSumIII.cpp" />
     <ClCompile Include="Q217_ContainsDuplicate.cpp" />
+    <ClCompile Include="Q219_ContainsDuplicateII.cpp" />
+    <ClCompile Include="Q220_ContainsDuplicateIII.cpp" />
+    <ClCompile Include="Q212_WordSearchII.cpp" />
+    <ClCompile Include="Q221_MaximalSquare.cpp" />
+    <ClCompile Include="Q223_RectangleArea.cpp" />
+    <ClCompile Include="Q225_ImplementStackUsingQueues.cpp" />
+    <ClCompile Include="Q218_TheSkylineProblem.cpp" />
+    <ClCompile Include="Q224_BasicCalculator.cpp" />
+    <ClCompile Include="Q226_InvertBinaryTree.cpp" />
+    <ClCompile Include="Q256_PaintHouse.cpp" />
+    <ClCompile Include="Q227_BasicCalculatorII.cpp" />
+    <ClCompile Include="Q264_UglyNumberII.cpp" />
+    <ClCompile Include="Q265_PaintHouseII.cpp" />
+    <ClCompile Include="Q276_PaintFence.cpp" />
+    <ClCompile Include="Q279_PerfectSquares.cpp" />
+    <ClCompile Include="Q303_RangeSumQueryImmutable.cpp" />
+    <ClCompile Include="Q304_RangeSumQuery2DImmutable.cpp" />
+    <ClCompile Include="Q309_BestTimetoBuyandSellStockwithCooldown.cpp" />
+    <ClCompile Include="Q312_BurstBalloons.cpp" />
+    <ClCompile Include="Q321_CreateMaximumNumber.cpp" />
+    <ClCompile Include="Q337_HouseRobberIII.cpp" />
+    <ClCompile Include="Q338_CountingBits.cpp" />
+    <ClCompile Include="Q343_IntegerBreak.cpp" />
+    <ClCompile Include="Q354_RussianDollEnvelopes.cpp" />
+    <ClCompile Include="Q300_LongestIncreasingSubsequence.cpp" />
+    <ClCompile Include="Q357_CountNumbersWithUniqueDigits.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

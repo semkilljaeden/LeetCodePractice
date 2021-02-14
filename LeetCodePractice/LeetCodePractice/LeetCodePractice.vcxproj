@@ -113,6 +113,10 @@
     <ClCompile Include="Q343_IntegerBreak.cpp" />
     <ClCompile Include="Q354_RussianDollEnvelopes.cpp" />
     <ClCompile Include="Q357_CountNumbersWithUniqueDigits.cpp" />
+    <ClCompile Include="Q361_BombEnemy.cpp" />
+    <ClCompile Include="Q363_MaxSumOfRectangleNoLargerThanK.cpp" />
+    <ClCompile Include="Q368_LargestDivisibleSubset.cpp" />
+    <ClCompile Include="Q375_GuessNumberHigherOrLowerII.cpp" />
     <ClCompile Include="TreeNode.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

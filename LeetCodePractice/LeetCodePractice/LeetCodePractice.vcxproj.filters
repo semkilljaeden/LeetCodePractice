@@ -116,6 +116,10 @@
     <ClCompile Include="Q354_RussianDollEnvelopes.cpp" />
     <ClCompile Include="Q300_LongestIncreasingSubsequence.cpp" />
     <ClCompile Include="Q357_CountNumbersWithUniqueDigits.cpp" />
+    <ClCompile Include="Q361_BombEnemy.cpp" />
+    <ClCompile Include="Q363_MaxSumOfRectangleNoLargerThanK.cpp" />
+    <ClCompile Include="Q368_LargestDivisibleSubset.cpp" />
+    <ClCompile Include="Q375_GuessNumberHigherOrLowerII.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

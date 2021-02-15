@@ -120,6 +120,12 @@
     <ClCompile Include="Q363_MaxSumOfRectangleNoLargerThanK.cpp" />
     <ClCompile Include="Q368_LargestDivisibleSubset.cpp" />
     <ClCompile Include="Q375_GuessNumberHigherOrLowerII.cpp" />
+    <ClCompile Include="Q376_WiggleSubsequence.cpp" />
+    <ClCompile Include="Q377_CombinationSumIV.cpp" />
+    <ClCompile Include="Q392_IsSubSequence.cpp" />
+    <ClCompile Include="Q410_SplitArrayLargestSum.cpp" />
+    <ClCompile Include="Q413_ArithmeticSlices.cpp" />
+    <ClCompile Include="Q416_PartitionEqualSubsetSum.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

@@ -56,6 +56,7 @@
     <ClCompile Include="Q160_IntersectionofTwoLinkedLists.cpp" />
     <ClCompile Include="Q161_OneEditDistance.cpp" />
     <ClCompile Include="Q163_MissingRanges.cpp" />
+    <ClCompile Include="Q1643_KthSmallestInstructions.cpp" />
     <ClCompile Include="Q164_MaximumGap.cpp" />
     <ClCompile Include="Q165_CompareVersionNumbers.cpp" />
     <ClCompile Include="Q167_TwoSumIIInputarrayissorted.cpp" />
@@ -125,8 +126,14 @@
     <ClCompile Include="Q416_PartitionEqualSubsetSum.cpp" />
     <ClCompile Include="Q418_SentenceScreenFitting.cpp" />
     <ClCompile Include="Q446_ArithmeticSliceIISubsequence.cpp" />
+    <ClCompile Include="Q459_RepeatedSubstringPattern.cpp" />
     <ClCompile Include="Q464_CanIWin.cpp" />
     <ClCompile Include="Q466_CountTheRepetitions.cpp" />
+    <ClCompile Include="Q467_UniqueSubstringsInWraparoundString.cpp" />
+    <ClCompile Include="Q471_EncodeStringWithShortestLength.cpp" />
+    <ClCompile Include="Q472_ConcatenatedWords.cpp" />
+    <ClCompile Include="Q474_OnesAndZeros.cpp" />
+    <ClCompile Include="Q486_PredictTheWinnder.cpp" />
     <ClCompile Include="TreeNode.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

@@ -5,6 +5,48 @@
 #include<utility>
 using namespace std;
 
+
+//2/18 TLE
+class Solution {
+public:
+    unordered_set<string> set;
+    vector<vector<string>> memo;
+    vector<string> wordBreak(string s, vector<string>& wordDict) {
+        set = unordered_set<string>(wordDict.cbegin(), wordDict.cend());
+        memo = vector<vector<string>>(s.size() + 1, vector<string>());
+        dp(s, 0);
+        return memo[0];
+    }
+
+    void dp(string& s, int pos) {
+        if (pos == s.size()) {
+            return;
+        }
+        if (memo[pos].size() > 0) {
+            return;
+        }
+        string&& t = s.substr(pos, s.size() - pos);
+        if (set.count(t) > 0) {
+            memo[pos].push_back(t);
+        }
+        for (int i = 1; i < s.size() - pos; i++) {
+            string tmp = s.substr(pos, i);
+            if (set.count(tmp) > 0) {
+                dp(s, pos + i);
+                for (auto& x : memo[pos + i]) {
+                    memo[pos].push_back(tmp + " " + x);
+                }
+            }
+        }
+        return;
+    }
+
+};
+
+
+
+
+
 //7:42 8:08, n^2 but TLE
 
 //9:18 new linked break point

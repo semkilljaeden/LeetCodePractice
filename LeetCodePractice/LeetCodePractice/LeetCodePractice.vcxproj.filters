@@ -126,6 +126,10 @@
     <ClCompile Include="Q410_SplitArrayLargestSum.cpp" />
     <ClCompile Include="Q413_ArithmeticSlices.cpp" />
     <ClCompile Include="Q416_PartitionEqualSubsetSum.cpp" />
+    <ClCompile Include="Q418_SentenceScreenFitting.cpp" />
+    <ClCompile Include="Q446_ArithmeticSliceIISubsequence.cpp" />
+    <ClCompile Include="Q464_CanIWin.cpp" />
+    <ClCompile Include="Q466_CountTheRepetitions.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

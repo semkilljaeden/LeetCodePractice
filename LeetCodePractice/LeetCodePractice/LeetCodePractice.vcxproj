@@ -134,6 +134,7 @@
     <ClCompile Include="Q472_ConcatenatedWords.cpp" />
     <ClCompile Include="Q474_OnesAndZeros.cpp" />
     <ClCompile Include="Q486_PredictTheWinnder.cpp" />
+    <ClCompile Include="Q494_TargetSum.cpp" />
     <ClCompile Include="TreeNode.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

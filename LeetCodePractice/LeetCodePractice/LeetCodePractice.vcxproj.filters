@@ -137,6 +137,7 @@
     <ClCompile Include="Q474_OnesAndZeros.cpp" />
     <ClCompile Include="Q486_PredictTheWinnder.cpp" />
     <ClCompile Include="Q1643_KthSmallestInstructions.cpp" />
+    <ClCompile Include="Q494_TargetSum.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

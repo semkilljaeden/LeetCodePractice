@@ -29,7 +29,7 @@ public:
 Memory Usage: 8.4 MB, less than 13.83% of C++ online submissions for Combination Sum IV.
 */
 //2:12 2:18
-class Solution {
+class Solution2 {
 public:
     int combinationSum4(vector<int>& nums, int target) {
         unordered_map<int, int> memo;

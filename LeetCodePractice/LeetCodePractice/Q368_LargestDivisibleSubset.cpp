@@ -42,7 +42,7 @@ public:
 
 };
 //6:29 7:52 TLE
-class Solution {
+class Solution2 {
 public:
     set<int> s;
     vector<int> largestDivisibleSubset(vector<int>& nums) {

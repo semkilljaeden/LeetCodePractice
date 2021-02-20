@@ -29,7 +29,7 @@ public:
 
 //O(N^2)
 
-class Solution {
+class Solution2 {
 public:
     int lengthOfLIS(vector<int>& nums) {
         vector<int> memo(nums.size(), 0);

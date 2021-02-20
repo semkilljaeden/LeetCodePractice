@@ -23,7 +23,7 @@ public:
 
 
 //2:47 3:10 TLE wtf
-class Solution {
+class Solution2 {
 public:
     int findTargetSumWays(vector<int>& nums, int S) {
         if (S > 1000) {

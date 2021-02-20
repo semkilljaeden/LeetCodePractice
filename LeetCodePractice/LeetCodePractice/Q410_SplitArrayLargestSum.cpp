@@ -36,7 +36,7 @@ Runtime: 280 ms, faster than 31.65% of C++ online submissions for Split Array La
 Memory Usage: 7.8 MB, less than 31.18% of C++ online submissions for Split Array Largest Sum.
 */
 
-class Solution {
+class Solution2 {
 public:
     int splitArray(vector<int>& nums, int m) {
         int n = nums.size();
@@ -62,7 +62,7 @@ public:
 
 //6:58 10:21 10:33 O(mn^2) 	1740 ms	8.2 MB
 
-class Solution {
+class Solution4 {
 public:
     int splitArray(vector<int>& nums, int m) {
         int n = nums.size();

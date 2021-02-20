@@ -49,7 +49,7 @@ public:
 //we just need to use dp to find best number independently, then merge them togather. wtf
 //TLE O(mnk^2)
 
-class Solution {
+class Solution2 {
 public:
     vector<int> maxNumber(vector<int>& nums1, vector<int>& nums2, int k) {
         vector<vector<vector<vector<int>>>> memo(nums1.size() + 1, vector<vector<vector<int>>>(nums2.size() + 1,
@@ -68,15 +68,15 @@ public:
         }
         vector<int> tmp(k, INT_MIN);
         if (i < nums1.size()) {
-            tmp = Solution::max(tmp, dp(nums1, nums2, k, i + 1, j, memo));
-            tmp = Solution::max(tmp, dp(nums1, nums2, k - 1, i + 1, j, memo), nums1[i]);
+            tmp = max(tmp, dp(nums1, nums2, k, i + 1, j, memo));
+            tmp = max(tmp, max(nums1, dp(nums1, nums2, k - 1, i + 1, j, memo)));
         }
         if (j < nums2.size()) {
-        tmp = Solution::max(tmp, dp(nums1, nums2, k, i, j + 1, memo));
-        tmp = Solution::max(tmp, dp(nums1, nums2, k - 1, i, j + 1, memo), nums2[j]);
+        tmp = max(tmp, dp(nums1, nums2, k, i, j + 1, memo));
+        tmp = max(tmp, dp(nums1, nums2, k - 1, i, j + 1, memo), nums2[j]);
         }
         if (i < nums1.size() && j < nums2.size()) {
-            tmp = Solution::max(tmp, dp(nums1, nums2, k, i + 1, j + 1, memo));
+            tmp = std::max(tmp, dp(nums1, nums2, k, i + 1, j + 1, memo));
         }
     return memo[i][j][k - 1] = tmp;
 }

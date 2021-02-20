@@ -44,7 +44,7 @@ public:
 };
 //11:21 11:52 read the question wrongly
 
-class Solution {
+class Solution2 {
 public:
     int maxSumSubmatrix(vector<vector<int>>& matrix, int k) {
         int m = matrix.size();

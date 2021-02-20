@@ -43,7 +43,7 @@ public:
 
 //11:44 12:16 TLE
 
-class Solution {
+class Solution1 {
 public:
     string kthSmallestPath(vector<int>& destination, int k) {
         return dp(destination, 0, 0, k, "");

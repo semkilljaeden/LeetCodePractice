@@ -34,7 +34,7 @@ public:
 
 //O(n^3) TLE
 
-class Solution {
+class Solution2 {
 public:
     int numberOfArithmeticSlices(vector<int>& AA) {
         int n = AA.size();
@@ -71,7 +71,7 @@ public:
 
 
 
-class Solution {
+class Solution5 {
 public:
     int result = 0;
     long nan = (long)INT_MIN + (long)INT_MIN - 1;

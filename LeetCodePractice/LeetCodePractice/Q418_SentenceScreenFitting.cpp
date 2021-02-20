@@ -51,7 +51,7 @@ public:
 };
 //4:00 4:12 TLE
 
-class Solution {
+class Solution2 {
 public:
     int wordsTyping(vector<string>& sentence, int rows, int cols) {
         int count = 0;

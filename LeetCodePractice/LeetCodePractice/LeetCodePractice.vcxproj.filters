@@ -138,6 +138,14 @@
     <ClCompile Include="Q486_PredictTheWinnder.cpp" />
     <ClCompile Include="Q1643_KthSmallestInstructions.cpp" />
     <ClCompile Include="Q494_TargetSum.cpp" />
+    <ClCompile Include="Q514_FreedomTrail.cpp" />
+    <ClCompile Include="Q516_LongestPalindromicSubsequence.cpp" />
+    <ClCompile Include="Q517_SuperWashingMachines.cpp" />
+    <ClCompile Include="Q523_ContinuousSubarraySum.cpp" />
+    <ClCompile Include="Q546_RemoveBoxes.cpp" />
+    <ClCompile Include="Q576_OutOfBoundaryPaths.cpp" />
+    <ClCompile Include="Q552_StudentAttendanceRecordII.cpp" />
+    <ClCompile Include="Q568_MaximumVacationDays.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

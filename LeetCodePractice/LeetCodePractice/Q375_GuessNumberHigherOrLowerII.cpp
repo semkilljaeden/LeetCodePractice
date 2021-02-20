@@ -33,7 +33,7 @@ public:
 Runtime: 184 ms, faster than 52.55% of C++ online submissions for Guess Number Higher or Lower II.
 Memory Usage: 8.3 MB, less than 45.75% of C++ online submissions for Guess Number Higher or Lower II.
 */
-class Solution {
+class Solution2 {
 public:
     int getMoneyAmount(int n) {
         vector<vector<int>> memo(n + 1, vector<int>(n + 2, -1));

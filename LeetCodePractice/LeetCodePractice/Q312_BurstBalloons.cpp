@@ -34,7 +34,7 @@ Memory Usage: 10.3 MB, less than 18.57% of C++ online submissions for Burst Ball
 */
 
 
-class Solution {
+class Solution2 {
 public:
     int maxCoins(vector<int>& nums) {
         vector<int> n(nums.size() + 2);

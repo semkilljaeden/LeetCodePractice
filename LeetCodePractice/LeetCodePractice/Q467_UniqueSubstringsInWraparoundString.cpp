@@ -53,7 +53,7 @@ public:
 
 //12:24 1:14 too slow for medium, actually i have the algo, just took a bit long to implement
 
-class Solution {
+class Solution4 {
 public:
     int findSubstringInWraproundString(string p) {
         if (p.size() == 0) {

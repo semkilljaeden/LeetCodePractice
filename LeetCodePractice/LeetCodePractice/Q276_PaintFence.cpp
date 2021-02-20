@@ -1,6 +1,5 @@
 #include<vector>
 using namespace std;
-
 //read the answer
 class Solution {
 public:
@@ -29,7 +28,7 @@ public:
 
 //4:33 5:25 TLE
 
-class Solution {
+class Solution1 {
 public:
     int numWays(int n, int k) {
         if (n == 0 || k == 0) {

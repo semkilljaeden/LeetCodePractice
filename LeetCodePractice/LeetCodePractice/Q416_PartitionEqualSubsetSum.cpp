@@ -48,7 +48,7 @@ public:
 Runtime: 8 ms, faster than 99.06% of C++ online submissions for Partition Equal Subset Sum.
 Memory Usage: 75.2 MB, less than 17.30% of C++ online submissions for Partition Equal Subset Sum.
 */
-class Solution {
+class Solution2 {
 public:
     bool canPartition(vector<int>& nums) {
         int sum = 0;
@@ -90,7 +90,7 @@ Runtime: 636 ms, faster than 15.33% of C++ online submissions for Partition Equa
 Memory Usage: 198 MB, less than 5.03% of C++ online submissions for Partition Equal Subset Sum.
 */
 
-class Solution2 {
+class Solution3 {
 public:
     bool canPartition(vector<int>& nums) {
         int sum = 0;

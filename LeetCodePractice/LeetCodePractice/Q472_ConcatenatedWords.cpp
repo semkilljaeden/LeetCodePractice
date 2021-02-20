@@ -49,7 +49,7 @@ public:
 //6:54 weird bug, cannot find
 
 
-class Solution {
+class Solution3 {
 public:
     static bool com(string& a, string& b) {
         return a.size() < b.size();

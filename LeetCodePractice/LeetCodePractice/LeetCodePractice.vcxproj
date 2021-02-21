@@ -143,6 +143,10 @@
     <ClCompile Include="Q552_StudentAttendanceRecordII.cpp" />
     <ClCompile Include="Q568_MaximumVacationDays.cpp" />
     <ClCompile Include="Q576_OutOfBoundaryPaths.cpp" />
+    <ClCompile Include="Q600_NonNegativeIntegersWithoutConsecutiveOnes.cpp" />
+    <ClCompile Include="Q629_KInversePairsArray.cpp" />
+    <ClCompile Include="Q638_ShoppingOffers.cpp" />
+    <ClCompile Include="Q639_DecodeWaysII.cpp" />
     <ClCompile Include="TreeNode.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

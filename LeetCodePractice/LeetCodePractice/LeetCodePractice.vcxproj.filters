@@ -158,6 +158,11 @@
     <ClCompile Include="Q656_CoinPath.cpp" />
     <ClCompile Include="Q664_StrangePrinter.cpp" />
     <ClCompile Include="Q688_KnightProbabilityInChessboard.cpp" />
+    <ClCompile Include="Q317_ShortestDistanceFromAllBuilding.cpp" />
+    <ClCompile Include="Q689_MaximumSumOf3Non-OverlappingSubarrays.cpp" />
+    <ClCompile Include="Q691_StrickersToSpellWord.cpp" />
+    <ClCompile Include="Q698_PartitionToKEqualSumSubsets.cpp" />
+    <ClCompile Include="Q712_MinimumASCIIDeleteSumForTwoStrings.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

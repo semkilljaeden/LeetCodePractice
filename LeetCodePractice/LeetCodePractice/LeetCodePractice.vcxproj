@@ -147,6 +147,14 @@
     <ClCompile Include="Q629_KInversePairsArray.cpp" />
     <ClCompile Include="Q638_ShoppingOffers.cpp" />
     <ClCompile Include="Q639_DecodeWaysII.cpp" />
+    <ClCompile Include="Q646_MaximumLengthOfPairChain.cpp" />
+    <ClCompile Include="Q647_PalindromicSubstrings.cpp" />
+    <ClCompile Include="Q650_2KeysKeyboard.cpp" />
+    <ClCompile Include="Q651_4KeysKeyBoard.cpp" />
+    <ClCompile Include="Q656_CoinPath.cpp" />
+    <ClCompile Include="Q664_StrangePrinter.cpp" />
+    <ClCompile Include="Q673_NumberOfLongestIncreasingSubsequence.cpp" />
+    <ClCompile Include="Q688_KnightProbabilityInChessboard.cpp" />
     <ClCompile Include="TreeNode.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

@@ -11,6 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CF.cpp" />
     <ClCompile Include="GraphNode.cpp" />
     <ClCompile Include="ListNode.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -160,7 +161,19 @@
     <ClCompile Include="Q691_StrickersToSpellWord.cpp" />
     <ClCompile Include="Q698_PartitionToKEqualSumSubsets.cpp" />
     <ClCompile Include="Q712_MinimumASCIIDeleteSumForTwoStrings.cpp" />
+    <ClCompile Include="Q714_BestTimeToBuyAndSellStockWithTransactionFee.cpp" />
+    <ClCompile Include="Q718_MaximumLengthOfRepeatedSubarray.cpp" />
+    <ClCompile Include="Q727_MinimumWindowSubsequence.cpp" />
+    <ClCompile Include="Q730_CountDifferentPalindromicSubsequences.cpp" />
+    <ClCompile Include="Q740_DeleteAndEarn.cpp" />
+    <ClCompile Include="Q746_MinCostClimbingStairs.cpp" />
+    <ClCompile Include="Q750_NumberOfCornerRectangles.cpp" />
+    <ClCompile Include="Q764_LargestPlusSign.cpp" />
+    <ClCompile Include="Q940_DistinctSubsequencesII.cpp" />
     <ClCompile Include="TreeNode.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LCHeader.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

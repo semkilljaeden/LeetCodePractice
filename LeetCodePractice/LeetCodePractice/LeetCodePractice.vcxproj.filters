@@ -173,6 +173,8 @@
     <ClCompile Include="Q746_MinCostClimbingStairs.cpp" />
     <ClCompile Include="Q750_NumberOfCornerRectangles.cpp" />
     <ClCompile Include="Q764_LargestPlusSign.cpp" />
+    <ClCompile Include="Q787_CheapestFlightsWithinKStops.cpp" />
+    <ClCompile Include="Q790_DominoAndTrominoTiling.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

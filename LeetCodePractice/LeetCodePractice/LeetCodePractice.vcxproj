@@ -99,6 +99,7 @@
     <ClCompile Include="Q225_ImplementStackUsingQueues.cpp" />
     <ClCompile Include="Q226_InvertBinaryTree.cpp" />
     <ClCompile Include="Q227_BasicCalculatorII.cpp" />
+    <ClCompile Include="Q233_NumberOfDigitOne.cpp" />
     <ClCompile Include="Q256_PaintHouse.cpp" />
     <ClCompile Include="Q264_UglyNumberII.cpp" />
     <ClCompile Include="Q265_PaintHouseII.cpp" />
@@ -170,8 +171,34 @@
     <ClCompile Include="Q750_NumberOfCornerRectangles.cpp" />
     <ClCompile Include="Q764_LargestPlusSign.cpp" />
     <ClCompile Include="Q787_CheapestFlightsWithinKStops.cpp" />
+    <ClCompile Include="Q78_LongestTurbulentSubarray.cpp" />
     <ClCompile Include="Q790_DominoAndTrominoTiling.cpp" />
+    <ClCompile Include="Q799_ChampagneTower.cpp" />
+    <ClCompile Include="Q801_MinimumSwapsToMakeSequencesIncreasing.cpp" />
+    <ClCompile Include="Q808_SoupServings.cpp" />
+    <ClCompile Include="Q813_LargestSumOfAverages.cpp" />
+    <ClCompile Include="Q818_RaceCar.cpp" />
+    <ClCompile Include="Q837_New21Game.cpp" />
+    <ClCompile Include="Q838_PushDominoes.cpp" />
+    <ClCompile Include="Q847_ShortestPathVisitingAllNodes.cpp" />
+    <ClCompile Include="Q864_ShortestPathToGetAllKeys.cpp" />
+    <ClCompile Include="Q871_MinimumNumberOfRefuelingStops.cpp" />
+    <ClCompile Include="Q873_LengthOfLongestFibonacciSubsequence.cpp" />
+    <ClCompile Include="Q877_StoneGame.cpp" />
+    <ClCompile Include="Q879_ProfitableSchemes.cpp" />
+    <ClCompile Include="Q887_SuperEggDrop.cpp" />
+    <ClCompile Include="Q898_BitwiseOrsOfSubarrays.cpp" />
+    <ClCompile Include="Q902_NumbersAtMostNGivenDigitSet.cpp" />
+    <ClCompile Include="Q903_ValidPermutationsForDISequence.cpp" />
+    <ClCompile Include="Q920_NumberOfMusicPlaylists.cpp" />
+    <ClCompile Include="Q931_MinimumFallingPathSum.cpp" />
+    <ClCompile Include="Q935_KnightDialer.cpp" />
     <ClCompile Include="Q940_DistinctSubsequencesII.cpp" />
+    <ClCompile Include="Q943_FindTheShortestSuperstring.cpp" />
+    <ClCompile Include="Q950_DeleteColumnsToMakeSortedIII.cpp" />
+    <ClCompile Include="Q956_TallestBillboard.cpp" />
+    <ClCompile Include="Q960_DeleteColumnsToMakeSortedIII.cpp" />
+    <ClCompile Include="Q964_LeastOperatorsToExpressNumber.cpp" />
     <ClCompile Include="TreeNode.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -202,6 +202,11 @@
     <ClCompile Include="Q960_DeleteColumnsToMakeSortedIII.cpp" />
     <ClCompile Include="Q78_LongestTurbulentSubarray.cpp" />
     <ClCompile Include="Q964_LeastOperatorsToExpressNumber.cpp" />
+    <ClCompile Include="Q968_BinaryTreeCameras.cpp" />
+    <ClCompile Include="Q975_OddEvenJump.cpp" />
+    <ClCompile Include="Q983_MinimumCostForTickets.cpp" />
+    <ClCompile Include="Q982_TriplesWithBitwiseAndEqualToZero.cpp" />
+    <ClCompile Include="Q1055_ShortestWayToFormString.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

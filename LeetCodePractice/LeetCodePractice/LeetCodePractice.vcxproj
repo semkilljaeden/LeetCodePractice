@@ -16,6 +16,7 @@
     <ClCompile Include="ListNode.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="NodeRandom.cpp" />
+    <ClCompile Include="Q1055_ShortestWayToFormString.cpp" />
     <ClCompile Include="Q128_LongestConsecutiveSequence.cpp" />
     <ClCompile Include="Q129_SumRootToLeafNumbers.cpp" />
     <ClCompile Include="Q126_WordLadderII.cpp" />
@@ -199,6 +200,10 @@
     <ClCompile Include="Q956_TallestBillboard.cpp" />
     <ClCompile Include="Q960_DeleteColumnsToMakeSortedIII.cpp" />
     <ClCompile Include="Q964_LeastOperatorsToExpressNumber.cpp" />
+    <ClCompile Include="Q968_BinaryTreeCameras.cpp" />
+    <ClCompile Include="Q975_OddEvenJump.cpp" />
+    <ClCompile Include="Q982_TriplesWithBitwiseAndEqualToZero.cpp" />
+    <ClCompile Include="Q983_MinimumCostForTickets.cpp" />
     <ClCompile Include="TreeNode.cpp" />
   </ItemGroup>
   <ItemGroup>

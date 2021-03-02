@@ -207,6 +207,11 @@
     <ClCompile Include="Q983_MinimumCostForTickets.cpp" />
     <ClCompile Include="Q982_TriplesWithBitwiseAndEqualToZero.cpp" />
     <ClCompile Include="Q1055_ShortestWayToFormString.cpp" />
+    <ClCompile Include="Q1058_MinimizeRoundingErrorToMeetTarget.cpp" />
+    <ClCompile Include="Q1000_MinimumCostToMergeStones.cpp" />
+    <ClCompile Include="Q1167_MinimumCostToConnectSticks.cpp" />
+    <ClCompile Include="Q1066_CampusBikesII.cpp" />
+    <ClCompile Include="Q1012_NumbersWithRepeatedDigits.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

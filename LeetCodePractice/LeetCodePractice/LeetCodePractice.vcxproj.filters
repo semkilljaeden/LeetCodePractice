@@ -213,6 +213,10 @@
     <ClCompile Include="Q1066_CampusBikesII.cpp" />
     <ClCompile Include="Q1012_NumbersWithRepeatedDigits.cpp" />
     <ClCompile Include="Q1024_VideoStitching.cpp" />
+    <ClCompile Include="Q1067_DigitCountInRange.cpp" />
+    <ClCompile Include="Q1027_LongestArithmeticSubsequence.cpp" />
+    <ClCompile Include="Q1074_NumberOfSubmatricesThatSumToTarget.cpp" />
+    <ClCompile Include="Q1136_ParallelCourses.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

@@ -19,9 +19,13 @@
     <ClCompile Include="Q1000_MinimumCostToMergeStones.cpp" />
     <ClCompile Include="Q1012_NumbersWithRepeatedDigits.cpp" />
     <ClCompile Include="Q1024_VideoStitching.cpp" />
+    <ClCompile Include="Q1027_LongestArithmeticSubsequence.cpp" />
     <ClCompile Include="Q1055_ShortestWayToFormString.cpp" />
     <ClCompile Include="Q1058_MinimizeRoundingErrorToMeetTarget.cpp" />
     <ClCompile Include="Q1066_CampusBikesII.cpp" />
+    <ClCompile Include="Q1067_DigitCountInRange.cpp" />
+    <ClCompile Include="Q1074_NumberOfSubmatricesThatSumToTarget.cpp" />
+    <ClCompile Include="Q1136_ParallelCourses.cpp" />
     <ClCompile Include="Q1167_MinimumCostToConnectSticks.cpp" />
     <ClCompile Include="Q128_LongestConsecutiveSequence.cpp" />
     <ClCompile Include="Q129_SumRootToLeafNumbers.cpp" />

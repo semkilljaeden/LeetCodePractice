@@ -217,6 +217,8 @@
     <ClCompile Include="Q1027_LongestArithmeticSubsequence.cpp" />
     <ClCompile Include="Q1074_NumberOfSubmatricesThatSumToTarget.cpp" />
     <ClCompile Include="Q1136_ParallelCourses.cpp" />
+    <ClCompile Include="Q1039_MinimumScoreTriangulationOfPolygon.cpp" />
+    <ClCompile Include="Q1199_MinimumTimeToBuildBlocks.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

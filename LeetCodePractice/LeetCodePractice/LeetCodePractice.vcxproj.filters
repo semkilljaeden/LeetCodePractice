@@ -219,6 +219,11 @@
     <ClCompile Include="Q1136_ParallelCourses.cpp" />
     <ClCompile Include="Q1039_MinimumScoreTriangulationOfPolygon.cpp" />
     <ClCompile Include="Q1199_MinimumTimeToBuildBlocks.cpp" />
+    <ClCompile Include="Q1043_PartitionArrayForMaximumSum.cpp" />
+    <ClCompile Include="Q1048_LongestStringChain.cpp" />
+    <ClCompile Include="Q1092_ShortestCommonSupersequence.cpp" />
+    <ClCompile Include="Q1049_LastStoneWeightII.cpp" />
+    <ClCompile Include="Q1216_ValidPalindromeIII.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

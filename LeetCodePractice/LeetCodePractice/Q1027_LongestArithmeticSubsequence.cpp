@@ -1,4 +1,27 @@
 #include "LCHeader.h"
+
+
+int dp(vector<int>& A, int idx, int diff, vector<vector<int>>& memo) {
+    int max = 1;
+    if (idx == A.size() - 1) {
+        return 1;
+    }
+    if (diff != INT_MIN && memo[idx][diff + 500] != -1) {
+        return memo[idx][diff + 500];
+    }
+    for (int i = idx + 1; i < A.size(); i++) {
+        if (A[i] - A[idx] == diff || diff == INT_MIN) {
+            max = std::max(max, 1 + dp(A, i, A[i] - A[idx], memo));
+        }
+    }
+    if (diff != INT_MIN) {
+        memo[idx][diff + 500] = max;
+    }
+    return max;
+}
+
+
+
 //7:55
 /*
 Runtime: 252 ms, faster than 71.87% of C++ online submissions for Longest Arithmetic Subsequence.

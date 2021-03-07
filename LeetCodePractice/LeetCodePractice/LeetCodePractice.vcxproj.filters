@@ -224,6 +224,16 @@
     <ClCompile Include="Q1092_ShortestCommonSupersequence.cpp" />
     <ClCompile Include="Q1049_LastStoneWeightII.cpp" />
     <ClCompile Include="Q1216_ValidPalindromeIII.cpp" />
+    <ClCompile Include="Q1230_TossStrangeCoins.cpp" />
+    <ClCompile Include="Q1246_PalindromeRemoval.cpp" />
+    <ClCompile Include="Q1519_NumberOfNodesInTheSub-TreeWithTheSameLabel.cpp" />
+    <ClCompile Include="Q1105_FillingBookcaseShelves.cpp" />
+    <ClCompile Include="Q1273_DeleteTreeNodes.cpp" />
+    <ClCompile Include="Q1130_MinimumCostTreeFromLeafValues.cpp" />
+    <ClCompile Include="Q1259_HandshakesThatDon%27tCross.cpp" />
+    <ClCompile Include="Q146_LRUCache.cpp" />
+    <ClCompile Include="Q460_LFUCache.cpp" />
+    <ClCompile Include="Q1125_SmallestSufficientTeam.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

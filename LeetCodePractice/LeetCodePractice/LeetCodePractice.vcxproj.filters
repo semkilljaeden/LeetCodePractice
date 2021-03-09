@@ -234,6 +234,19 @@
     <ClCompile Include="Q146_LRUCache.cpp" />
     <ClCompile Include="Q460_LFUCache.cpp" />
     <ClCompile Include="Q1125_SmallestSufficientTeam.cpp" />
+    <ClCompile Include="Q992_SubarraysWithKDifferentIntegers.cpp" />
+    <ClCompile Include="Q340_LongestSubstringWithAtMostKDistinctCharacters.cpp" />
+    <ClCompile Include="Q1139_Largest1BorderedSquare.cpp" />
+    <ClCompile Include="Q1289_MinimumFallingPathSumII.cpp" />
+    <ClCompile Include="Q445_AddTwoNumbersII.cpp" />
+    <ClCompile Include="Q739_DailyTemperatures.cpp" />
+    <ClCompile Include="Q556_NextGreaterElementIII.cpp" />
+    <ClCompile Include="Q31_NextPermutation.cpp" />
+    <ClCompile Include="Q286_WallsAndGates.cpp" />
+    <ClCompile Include="Q394_DecodeString.cpp" />
+    <ClCompile Include="Q973_KClosestPointsToOrigin.cpp" />
+    <ClCompile Include="Q974_SubarraySumsDivisibleByK.cpp" />
+    <ClCompile Include="Q543_DiameterOfBinaryTree.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

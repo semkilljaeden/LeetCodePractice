@@ -247,6 +247,10 @@
     <ClCompile Include="Q973_KClosestPointsToOrigin.cpp" />
     <ClCompile Include="Q974_SubarraySumsDivisibleByK.cpp" />
     <ClCompile Include="Q543_DiameterOfBinaryTree.cpp" />
+    <ClCompile Include="Q692_TopKFrequentWords.cpp" />
+    <ClCompile Include="Q299_BullsAndCows.cpp" />
+    <ClCompile Include="Q402_RemoveKDigits.cpp" />
+    <ClCompile Include="Q1057_CampusBikes.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

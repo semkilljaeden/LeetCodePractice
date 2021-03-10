@@ -25,6 +25,7 @@
     <ClCompile Include="Q1048_LongestStringChain.cpp" />
     <ClCompile Include="Q1049_LastStoneWeightII.cpp" />
     <ClCompile Include="Q1055_ShortestWayToFormString.cpp" />
+    <ClCompile Include="Q1057_CampusBikes.cpp" />
     <ClCompile Include="Q1058_MinimizeRoundingErrorToMeetTarget.cpp" />
     <ClCompile Include="Q1066_CampusBikesII.cpp" />
     <ClCompile Include="Q1067_DigitCountInRange.cpp" />
@@ -135,6 +136,7 @@
     <ClCompile Include="Q276_PaintFence.cpp" />
     <ClCompile Include="Q279_PerfectSquares.cpp" />
     <ClCompile Include="Q286_WallsAndGates.cpp" />
+    <ClCompile Include="Q299_BullsAndCows.cpp" />
     <ClCompile Include="Q300_LongestIncreasingSubsequence.cpp" />
     <ClCompile Include="Q303_RangeSumQueryImmutable.cpp" />
     <ClCompile Include="Q304_RangeSumQuery2DImmutable.cpp" />
@@ -157,6 +159,7 @@
     <ClCompile Include="Q377_CombinationSumIV.cpp" />
     <ClCompile Include="Q392_IsSubSequence.cpp" />
     <ClCompile Include="Q394_DecodeString.cpp" />
+    <ClCompile Include="Q402_RemoveKDigits.cpp" />
     <ClCompile Include="Q410_SplitArrayLargestSum.cpp" />
     <ClCompile Include="Q413_ArithmeticSlices.cpp" />
     <ClCompile Include="Q416_PartitionEqualSubsetSum.cpp" />
@@ -197,6 +200,7 @@
     <ClCompile Include="Q688_KnightProbabilityInChessboard.cpp" />
     <ClCompile Include="Q689_MaximumSumOf3Non-OverlappingSubarrays.cpp" />
     <ClCompile Include="Q691_StrickersToSpellWord.cpp" />
+    <ClCompile Include="Q692_TopKFrequentWords.cpp" />
     <ClCompile Include="Q698_PartitionToKEqualSumSubsets.cpp" />
     <ClCompile Include="Q712_MinimumASCIIDeleteSumForTwoStrings.cpp" />
     <ClCompile Include="Q714_BestTimeToBuyAndSellStockWithTransactionFee.cpp" />

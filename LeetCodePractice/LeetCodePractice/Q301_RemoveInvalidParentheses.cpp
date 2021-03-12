@@ -149,7 +149,7 @@ public:
                 }
                 return left;
             }
-        }(
+        }
         else if (s[idx] == ')') {
             auto left = make_pair(10000000, vector<vector<int>> {vector<int>()});
             if (count > 0) {

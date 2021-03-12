@@ -16,6 +16,7 @@
     <ClCompile Include="ListNode.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="NodeRandom.cpp" />
+    <ClCompile Include="Q611_ValidTriangleNumber.cpp" />
     <ClCompile Include="Q1000_MinimumCostToMergeStones.cpp" />
     <ClCompile Include="Q1012_NumbersWithRepeatedDigits.cpp" />
     <ClCompile Include="Q1024_VideoStitching.cpp" />

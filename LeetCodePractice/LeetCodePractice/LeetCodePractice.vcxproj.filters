@@ -264,6 +264,7 @@
     <ClCompile Include="Q59_SpiralMatrixII.cpp" />
     <ClCompile Include="Q417_PacificAtlanticWaterFLow.cpp" />
     <ClCompile Include="Q301_RemoveInvalidParentheses.cpp" />
+    <ClCompile Include="Q611_ValidTriangleNumber.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

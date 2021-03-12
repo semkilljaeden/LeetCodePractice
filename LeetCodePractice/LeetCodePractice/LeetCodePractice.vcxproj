@@ -36,7 +36,9 @@
     <ClCompile Include="Q1130_MinimumCostTreeFromLeafValues.cpp" />
     <ClCompile Include="Q1136_ParallelCourses.cpp" />
     <ClCompile Include="Q1139_Largest1BorderedSquare.cpp" />
+    <ClCompile Include="Q1153_StringTransformsIntoAnotherString.cpp" />
     <ClCompile Include="Q1167_MinimumCostToConnectSticks.cpp" />
+    <ClCompile Include="Q1197_MinimumKnightMoves.cpp" />
     <ClCompile Include="Q1199_MinimumTimeToBuildBlocks.cpp" />
     <ClCompile Include="Q1216_ValidPalindromeIII.cpp" />
     <ClCompile Include="Q1230_TossStrangeCoins.cpp" />
@@ -126,18 +128,22 @@
     <ClCompile Include="Q221_MaximalSquare.cpp" />
     <ClCompile Include="Q223_RectangleArea.cpp" />
     <ClCompile Include="Q224_BasicCalculator.cpp" />
+    <ClCompile Include="Q224_BasicCalculatorRedo.cpp" />
     <ClCompile Include="Q225_ImplementStackUsingQueues.cpp" />
     <ClCompile Include="Q226_InvertBinaryTree.cpp" />
     <ClCompile Include="Q227_BasicCalculatorII.cpp" />
     <ClCompile Include="Q233_NumberOfDigitOne.cpp" />
+    <ClCompile Include="Q239_SlidingWindowMaximum.cpp" />
     <ClCompile Include="Q256_PaintHouse.cpp" />
     <ClCompile Include="Q264_UglyNumberII.cpp" />
     <ClCompile Include="Q265_PaintHouseII.cpp" />
     <ClCompile Include="Q276_PaintFence.cpp" />
     <ClCompile Include="Q279_PerfectSquares.cpp" />
     <ClCompile Include="Q286_WallsAndGates.cpp" />
+    <ClCompile Include="Q295_FindMedianFromDataStream.cpp" />
     <ClCompile Include="Q299_BullsAndCows.cpp" />
     <ClCompile Include="Q300_LongestIncreasingSubsequence.cpp" />
+    <ClCompile Include="Q301_RemoveInvalidParentheses.cpp" />
     <ClCompile Include="Q303_RangeSumQueryImmutable.cpp" />
     <ClCompile Include="Q304_RangeSumQuery2DImmutable.cpp" />
     <ClCompile Include="Q309_BestTimetoBuyandSellStockwithCooldown.cpp" />
@@ -163,7 +169,9 @@
     <ClCompile Include="Q410_SplitArrayLargestSum.cpp" />
     <ClCompile Include="Q413_ArithmeticSlices.cpp" />
     <ClCompile Include="Q416_PartitionEqualSubsetSum.cpp" />
+    <ClCompile Include="Q417_PacificAtlanticWaterFLow.cpp" />
     <ClCompile Include="Q418_SentenceScreenFitting.cpp" />
+    <ClCompile Include="Q437_PathSumIII.cpp" />
     <ClCompile Include="Q445_AddTwoNumbersII.cpp" />
     <ClCompile Include="Q446_ArithmeticSliceIISubsequence.cpp" />
     <ClCompile Include="Q459_RepeatedSubstringPattern.cpp" />
@@ -175,6 +183,7 @@
     <ClCompile Include="Q472_ConcatenatedWords.cpp" />
     <ClCompile Include="Q474_OnesAndZeros.cpp" />
     <ClCompile Include="Q486_PredictTheWinnder.cpp" />
+    <ClCompile Include="Q493_ReversePairs.cpp" />
     <ClCompile Include="Q494_TargetSum.cpp" />
     <ClCompile Include="Q514_FreedomTrail.cpp" />
     <ClCompile Include="Q516_LongestPalindromicSubsequence.cpp" />
@@ -186,6 +195,7 @@
     <ClCompile Include="Q556_NextGreaterElementIII.cpp" />
     <ClCompile Include="Q568_MaximumVacationDays.cpp" />
     <ClCompile Include="Q576_OutOfBoundaryPaths.cpp" />
+    <ClCompile Include="Q59_SpiralMatrixII.cpp" />
     <ClCompile Include="Q600_NonNegativeIntegersWithoutConsecutiveOnes.cpp" />
     <ClCompile Include="Q629_KInversePairsArray.cpp" />
     <ClCompile Include="Q638_ShoppingOffers.cpp" />
@@ -212,6 +222,8 @@
     <ClCompile Include="Q746_MinCostClimbingStairs.cpp" />
     <ClCompile Include="Q750_NumberOfCornerRectangles.cpp" />
     <ClCompile Include="Q764_LargestPlusSign.cpp" />
+    <ClCompile Include="Q770_BasicCalculatorIV.cpp" />
+    <ClCompile Include="Q772_BasicCalculatorIII.cpp" />
     <ClCompile Include="Q787_CheapestFlightsWithinKStops.cpp" />
     <ClCompile Include="Q78_LongestTurbulentSubarray.cpp" />
     <ClCompile Include="Q790_DominoAndTrominoTiling.cpp" />
@@ -228,6 +240,7 @@
     <ClCompile Include="Q873_LengthOfLongestFibonacciSubsequence.cpp" />
     <ClCompile Include="Q877_StoneGame.cpp" />
     <ClCompile Include="Q879_ProfitableSchemes.cpp" />
+    <ClCompile Include="Q885_SpiralMatrixIII.cpp" />
     <ClCompile Include="Q887_SuperEggDrop.cpp" />
     <ClCompile Include="Q898_BitwiseOrsOfSubarrays.cpp" />
     <ClCompile Include="Q902_NumbersAtMostNGivenDigitSet.cpp" />

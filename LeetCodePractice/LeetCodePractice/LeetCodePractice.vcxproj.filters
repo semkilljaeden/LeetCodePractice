@@ -251,6 +251,19 @@
     <ClCompile Include="Q299_BullsAndCows.cpp" />
     <ClCompile Include="Q402_RemoveKDigits.cpp" />
     <ClCompile Include="Q1057_CampusBikes.cpp" />
+    <ClCompile Include="Q1197_MinimumKnightMoves.cpp" />
+    <ClCompile Include="Q239_SlidingWindowMaximum.cpp" />
+    <ClCompile Include="Q437_PathSumIII.cpp" />
+    <ClCompile Include="Q295_FindMedianFromDataStream.cpp" />
+    <ClCompile Include="Q1153_StringTransformsIntoAnotherString.cpp" />
+    <ClCompile Include="Q772_BasicCalculatorIII.cpp" />
+    <ClCompile Include="Q224_BasicCalculatorRedo.cpp" />
+    <ClCompile Include="Q770_BasicCalculatorIV.cpp" />
+    <ClCompile Include="Q493_ReversePairs.cpp" />
+    <ClCompile Include="Q885_SpiralMatrixIII.cpp" />
+    <ClCompile Include="Q59_SpiralMatrixII.cpp" />
+    <ClCompile Include="Q417_PacificAtlanticWaterFLow.cpp" />
+    <ClCompile Include="Q301_RemoveInvalidParentheses.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

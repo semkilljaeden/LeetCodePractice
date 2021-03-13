@@ -16,6 +16,9 @@
     <ClCompile Include="ListNode.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="NodeRandom.cpp" />
+    <ClCompile Include="Q1296_DivideArrayInSetsOfKConsecutiveNumbers.cpp" />
+    <ClCompile Include="Q528_RandomPickWithWeight.cpp" />
+    <ClCompile Include="Q567_PermutationInString.cpp" />
     <ClCompile Include="Q611_ValidTriangleNumber.cpp" />
     <ClCompile Include="Q1000_MinimumCostToMergeStones.cpp" />
     <ClCompile Include="Q1012_NumbersWithRepeatedDigits.cpp" />
@@ -225,6 +228,7 @@
     <ClCompile Include="Q764_LargestPlusSign.cpp" />
     <ClCompile Include="Q770_BasicCalculatorIV.cpp" />
     <ClCompile Include="Q772_BasicCalculatorIII.cpp" />
+    <ClCompile Include="Q785_IsGraphBipartite.cpp" />
     <ClCompile Include="Q787_CheapestFlightsWithinKStops.cpp" />
     <ClCompile Include="Q78_LongestTurbulentSubarray.cpp" />
     <ClCompile Include="Q790_DominoAndTrominoTiling.cpp" />

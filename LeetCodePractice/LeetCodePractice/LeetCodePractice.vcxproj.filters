@@ -269,6 +269,8 @@
     <ClCompile Include="Q528_RandomPickWithWeight.cpp" />
     <ClCompile Include="Q785_IsGraphBipartite.cpp" />
     <ClCompile Include="Q1296_DivideArrayInSetsOfKConsecutiveNumbers.cpp" />
+    <ClCompile Include="Q1352_ProductOfTheLastKNumbers.cpp" />
+    <ClCompile Include="Q924_MinimizeMalwareSpread.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

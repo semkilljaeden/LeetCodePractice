@@ -17,6 +17,7 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="NodeRandom.cpp" />
     <ClCompile Include="Q1296_DivideArrayInSetsOfKConsecutiveNumbers.cpp" />
+    <ClCompile Include="Q1352_ProductOfTheLastKNumbers.cpp" />
     <ClCompile Include="Q528_RandomPickWithWeight.cpp" />
     <ClCompile Include="Q567_PermutationInString.cpp" />
     <ClCompile Include="Q611_ValidTriangleNumber.cpp" />
@@ -251,6 +252,7 @@
     <ClCompile Include="Q902_NumbersAtMostNGivenDigitSet.cpp" />
     <ClCompile Include="Q903_ValidPermutationsForDISequence.cpp" />
     <ClCompile Include="Q920_NumberOfMusicPlaylists.cpp" />
+    <ClCompile Include="Q924_MinimizeMalwareSpread.cpp" />
     <ClCompile Include="Q931_MinimumFallingPathSum.cpp" />
     <ClCompile Include="Q935_KnightDialer.cpp" />
     <ClCompile Include="Q940_DistinctSubsequencesII.cpp" />

@@ -16,8 +16,14 @@
     <ClCompile Include="ListNode.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="NodeRandom.cpp" />
+    <ClCompile Include="Q1155_NumberOfDiceRollsWithTargetSum.cpp" />
     <ClCompile Include="Q1296_DivideArrayInSetsOfKConsecutiveNumbers.cpp" />
     <ClCompile Include="Q1352_ProductOfTheLastKNumbers.cpp" />
+    <ClCompile Include="Q1416_RestoreTheArray.cpp" />
+    <ClCompile Include="Q1477_FindTwoNon-overlappingSub-arraysEachWithTargetSum.cpp" />
+    <ClCompile Include="Q1631_PathWithMinimum Effort.cpp" />
+    <ClCompile Include="Q336_PalindromePairs.cpp" />
+    <ClCompile Include="Q435_Non-OverlappingIntervals.cpp" />
     <ClCompile Include="Q528_RandomPickWithWeight.cpp" />
     <ClCompile Include="Q567_PermutationInString.cpp" />
     <ClCompile Include="Q611_ValidTriangleNumber.cpp" />
@@ -265,8 +271,10 @@
     <ClCompile Include="Q973_KClosestPointsToOrigin.cpp" />
     <ClCompile Include="Q974_SubarraySumsDivisibleByK.cpp" />
     <ClCompile Include="Q975_OddEvenJump.cpp" />
+    <ClCompile Include="Q981_TimeBasedKey-ValueStore.cpp" />
     <ClCompile Include="Q982_TriplesWithBitwiseAndEqualToZero.cpp" />
     <ClCompile Include="Q983_MinimumCostForTickets.cpp" />
+    <ClCompile Include="Q987_VerticalOrderTraversalOfABinaryTree.cpp" />
     <ClCompile Include="Q992_SubarraysWithKDifferentIntegers.cpp" />
     <ClCompile Include="TreeNode.cpp" />
   </ItemGroup>

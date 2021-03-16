@@ -271,6 +271,14 @@
     <ClCompile Include="Q1296_DivideArrayInSetsOfKConsecutiveNumbers.cpp" />
     <ClCompile Include="Q1352_ProductOfTheLastKNumbers.cpp" />
     <ClCompile Include="Q924_MinimizeMalwareSpread.cpp" />
+    <ClCompile Include="Q987_VerticalOrderTraversalOfABinaryTree.cpp" />
+    <ClCompile Include="Q981_TimeBasedKey-ValueStore.cpp" />
+    <ClCompile Include="Q1155_NumberOfDiceRollsWithTargetSum.cpp" />
+    <ClCompile Include="Q435_Non-OverlappingIntervals.cpp" />
+    <ClCompile Include="Q1477_FindTwoNon-overlappingSub-arraysEachWithTargetSum.cpp" />
+    <ClCompile Include="Q1416_RestoreTheArray.cpp" />
+    <ClCompile Include="Q1631_PathWithMinimum Effort.cpp" />
+    <ClCompile Include="Q336_PalindromePairs.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

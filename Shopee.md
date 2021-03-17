@@ -36,19 +36,30 @@ Passive:Mutex, block other people
 Optimistic: CAS, version number (a thread may keep retrying to save, self spinning) ABA problem
 
 IV self spin, mutex
-1.self spin, keep trying to acquire lock --- no context switching
-2. thread yield and go to sleep, let OS to wake it up ---- context switching
+1.self spin, keep trying to acquire lock --- no context switching ----user space
+2. thread yield and go to sleep, let OS to wake it up ---- context switching  ----kernal
+
+
+并发有两大需求，一是互斥，二是等待。互斥是因为线程间存在共享数据，等待则是因为线程间存在依赖。互斥的话，通过互斥锁能搞定，常见的有依赖操作系统的 mutex，或是纯用户态 spinlock（但这种 spinlock 不通用，很容易出现性能差的 bad case ）。条件变量，是为了解决等待需求。考虑实现生产者消费者队列，生产者和消费者各是一个线程。一个明显的依赖是，消费者线程依赖生产者线程 push 元素进队列。没有条件变量，你会怎么实现消费者呢？让消费者线程一直轮询队列（需要加 mutex)。如果是队列里有值，就去消费；如果为空，要么是继续查( spin 策略)，要么 sleep 一下，让系统过一会再唤醒你，你再次查。可以想到，无论哪种策略，都不通用，要么费 cpu，要么线程过分 sleep，影响该线程的性能。有条件变量后，你就能用事件模式了。上面的消费者线程，发现队列为空，就告诉操作系统，我要 wait，一会肯定有其他线程发信号来唤醒我的。这个『其他线程』，实际上就是生产者线程。生产者线程 push 队列之后，则调用 signal，告诉操作系统，之前有个线程在 wait，你现在可以唤醒它了。上述两种等待方式，前者是轮询(poll)，后者是事件(event)。一般来说，事件方式比较通用，性能不会太差(但存在切换上下文的开销)。轮询方式的性能，就非常依赖并发 pattern，也特别消耗 cpu。
+
+
+
+
+
 
 Fair vs Unfair：
 Fair: FIFO
 Unfair: faster thread can get the lock, slow thread may stave
 
-Deadlock:
+什么叫死锁？死锁的必要条件？如何处理死锁问题？
 
-1. target can only be acquire once  --- read 
-2. No willingly give up, hold and wait --- timeout mechanism
-3. cannot forcely acquire
-4. loop condition   --- make the lock acquiring order all the same
+    Deadlock:
+
+    1. target can only be acquire once  --- read 
+    2. No willingly give up, hold and wait --- timeout mechanism, conditional variable
+    3. cannot forcely acquire
+    4. loop condition   --- make the lock acquiring order all the same
+
 
 
 
@@ -61,7 +72,11 @@ Deadlock:
 
 讲一下B+树的实现原理，为什么要用B+树？
 
-    数据记录本身被存于主索引（一颗B+Tree）的叶子节点上，这就要求同一个叶子节点内（大小为一个内存页或磁盘页）的各条数据记录按主键顺序存放因此每当有一条新的记录插入时，MySQL会根据其主键将其插入适当的节点和位置，如果页面达到装载因子（InnoDB默认为15/16），则开辟一个新的页（节点）3、如果表使用自增主键，那么每次插入新的记录，记录就会顺序添加到当前索引节点的后续位置，当一页写满，就会自动开辟一个新的页4、如果使用非自增主键（如果身份证号或学号等），由于每次插入主键的值近似于随机，因此每次新纪录都要被插到现有索引页得中间某个位置此时MySQL不得不为了将新记录插到合适位置而移动数据，甚至目标页面可能已经被回写到磁盘上而从缓存中清掉，此时又要从磁盘上读回来，这增加了很多开销同时频繁的移动、分页操作造成了大量的碎片，得到了不够紧凑的索引结构，后续不得不通过OPTIMIZE TABLE来重建表并优化填充页面。
+    数据记录本身被存于主索引（一颗B+Tree）的叶子节点上，这就要求同一个叶子节点内（大小为一个内存页或磁盘页）的各条数据记录按主键顺序存放因此每当有一条新的记录插入时，MySQL会根据其主键将其插入适当的节点和位置，如果页面达到装载因子（InnoDB默认为15/16），则开辟一个新的页（节点）3、
+    
+    如果表使用自增主键，那么每次插入新的记录，记录就会顺序添加到当前索引节点的后续位置，当一页写满，就会自动开辟一个新的页4、如果使用非自增主键（如果身份证号或学号等），由于每次插入主键的值近似于随机，因此每次新纪录都要被插到现有索引页得中间某个位置此时MySQL不得不为了将新记录插到合适位置而移动数据，甚至目标页面可能已经被回写到磁盘上而从缓存中清掉，此时又要从磁盘上读回来，这增加了很多开销同时频繁的移动、分页操作造成了大量的碎片，得到了不够紧凑的索引结构，后续不得不通过OPTIMIZE TABLE来重建表并优化填充页面。
+
+    Hash cannot get relation
 
 
 
@@ -88,7 +103,7 @@ Hashmap了解吗？红黑树讲一讲，为什么用红黑树？
 
 CAP：
 
-    Consistency, Availability, Partition Tolerance
+    Consistency, Availability, Partition Tolerance 如上面我们做的分布式系统，两个网络节点之间无法通信的情况下， 节点被隔离，产生了网络分区， 整个系统仍然是可以工作的这个就叫做分区容错性（Partition tolerance， 简称P）。
 
     从客户端角度，多进程并发访问时，更新过的数据在不同进程如何获取的不同策略，决定了不同的一致性。强一致性   对于关系型数据库，要求更新过的数据能被后续的访问都能看到，这是强一致性。弱一致性   如果能容忍后续的部分或者全部访问不到，则是弱一致性。最终一致性   如果经过一段时间后要求能访问到更新后的数据，则是最终一致性。
 
@@ -152,6 +167,9 @@ NoSQL vs SQL:
     协程拥有自己的寄存器上下文和栈。协程调度切换时，将寄存器上下文和栈保存到其他地方，在切回来的时候，恢复先前保存的寄存器上下文和栈。因此：
     协程能保留上一次调用时的状态（即所有局部状态的一个特定组合），每次过程重入时，就相当于进入上一次调用的状态，换种说法：进入上一次离开时所处逻辑流的位置。
 
+https://www.zhihu.com/question/20511233/answer/75267275
+https://www.zhihu.com/search?type=content&q=c%23%20%E5%8D%8F%E7%A8%8B%20%E4%B8%8A%E4%B8%8B%E6%96%87%E5%88%87%E6%8D%A2
+
 
     协程的好处：
 
@@ -177,8 +195,9 @@ NoSQL vs SQL:
 
 线程之间的同步方式?(锁,信号量)
 
-锁
+锁, conditional variable
 
+Waiting Queue, Ready Queue, once notified, move from waiting queue to ready queue
 
 
 进程调度算法？
@@ -195,19 +214,19 @@ NoSQL vs SQL:
 
 
 
+网页每次获取数据都要建立tcp链接吗—一个tcp链接能建立多少个http请求  Keep-Alive
+    
+    
+    
+    HTTP协议即超文本传送协议(Hypertext Transfer Protocol )，是Web联网的基础，也是手机联网常用的协议之一，HTTP协议是建立在TCP协议之上的一种应用。      HTTP连接最显著的特点是客户端发送的每次请求都需要服务器回送响应，在请求结束后，会主动释放连接。从建立连接到关闭连接的过程称为“一次连接”。      1）在HTTP 1.0中，客户端的每次请求都要求建立一次单独的连接，在处理完本次请求后，就自动释放连接。      2）在HTTP 1.1中则可以在一次连接中处理多个请求，并且多个请求可以重叠进行，不需要等待一个请求结束后再发送下一个请求。      由于HTTP在每次请求结束后都会主动释放连接，因此HTTP连接是一种“短连接”，要保持客户端程序的在线状态，需要不断地向服务器发起连接请求。通常的 做法是即时不需要获得任何数据，客户端也保持每隔一段固定的时间向服务器发送一次“保持连接”的请求，服务器在收到该请求后对客户端进行回复，表明知道客 户端“在线”。若服务器长时间无法收到客户端的请求，则认为客户端“下线”，若客户端长时间无法收到服务器的回复，则认为网络已经断开
 
-什么叫死锁？死锁的必要条件？如何处理死锁问题？
 
-    Deadlock:
-
-    1. target can only be acquire once  --- read 
-    2. No willingly give up, hold and wait --- timeout mechanism
-    3. cannot forcely acquire
-    4. loop condition   --- make the lock acquiring order all the same
 
 
 
 计算机网络七层结构？每一层主要做什么？http(application)、tcp(transport) 分别属于哪一层？
+
+
 
 https://www.zhihu.com/search?type=content&q=%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B
 
@@ -237,7 +256,20 @@ http与https的区别？https的加密方式？
 tcp三次握手？四次挥手？
 
 
-    为什么TCP连接的时候是3次？2次不可以吗？因为需要考虑连接时丢包的问题，如果只握手2次，第二次握手时如果服务端发给客户端的确认报文段丢失，此时服务端已经准备好了收发数(可以理解服务端已经连接成功)据，而客户端一直没收到服务端的确认报文，所以客户端就不知道服务端是否已经准备好了(可以理解为客户端未连接成功)，这种情况下客户端不会给服务端发数据，也会忽略服务端发过来的数据。如果是三次握手，即便发生丢包也不会有问题，比如如果第三次握手客户端发的确认ack报文丢失，服务端在一段时间内没有收到确认ack报文的话就会重新进行第二次握手，也就是服务端会重发SYN报文段，客户端收到重发的报文段后会再次给服务端发送确认ack报文。为什么TCP连接的时候是3次，关闭的时候却是4次？因为只有在客户端和服务端都没有数据要发送的时候才能断开TCP。而客户端发出FIN报文时只能保证客户端没有数据发了，服务端还有没有数据发客户端是不知道的。而服务端收到客户端的FIN报文后只能先回复客户端一个确认报文来告诉客户端我服务端已经收到你的FIN报文了，但我服务端还有一些数据没发完，等这些数据发完了服务端才能给客户端发FIN报文(所以不能一次性将确认报文和FIN报文发给客户端，就是这里多出来了一次)。为什么客户端发出第四次挥手的确认报文后要等2MSL的时间才能释放TCP连接？这里同样是要考虑丢包的问题，如果第四次挥手的报文丢失，服务端没收到确认ack报文就会重发第三次挥手的报文，这样报文一去一回最长时间就是2MSL，所以需要等这么长时间来确认服务端确实已经收到了。如果已经建立了连接，但是客户端突然出现故障了怎么办？TCP设有一个保活计时器，客户端如果出现故障，服务器不能一直等下去，白白浪费资源。服务器每收到一次客户端的请求后都会重新复位这个计时器，时间通常是设置为2小时，若两小时还没有收到客户端的任何数据，服务器就会发送一个探测报文段，以后每隔75秒钟发送一次。若一连发送10个探测报文仍然没反应，服务器就认为客户端出了故障，接着就关闭连接。
+    为什么TCP连接的时候是3次？2次不可以吗？
+        因为需要考虑连接时丢包的问题，如果只握手2次，第二次握手时如果服务端发给客户端的确认报文段丢失，此时服务端已经准备好了收发数(可以理解服务端已经连接成功)据，而客户端一直没收到服务端的确认报文，所以客户端就不知道服务端是否已经准备好了(可以理解为客户端未连接成功)，这种情况下客户端不会给服务端发数据，也会忽略服务端发过来的数据。如果是三次握手，即便发生丢包也不会有问题，比如如果第三次握手客户端发的确认ack报文丢失，服务端在一段时间内没有收到确认ack报文的话就会重新进行第二次握手，也就是服务端会重发SYN报文段，客户端收到重发的报文段后会再次给服务端发送确认ack报文。
+        
+    为什么TCP连接的时候是3次，关闭的时候却是4次？
+    
+        因为只有在客户端和服务端都没有数据要发送的时候才能断开TCP。而客户端发出FIN报文时只能保证客户端没有数据发了，服务端还有没有数据发客户端是不知道的。而服务端收到客户端的FIN报文后只能先回复客户端一个确认报文来告诉客户端我服务端已经收到你的FIN报文了，但我服务端还有一些数据没发完，等这些数据发完了服务端才能给客户端发FIN报文(所以不能一次性将确认报文和FIN报文发给客户端，就是这里多出来了一次)。
+        
+    为什么客户端发出第四次挥手的确认报文后要等2MSL的时间才能释放TCP连接？
+    
+        这里同样是要考虑丢包的问题，如果第四次挥手的报文丢失，服务端没收到确认ack报文就会重发第三次挥手的报文，这样报文一去一回最长时间就是2MSL，所以需要等这么长时间来确认服务端确实已经收到了。
+        
+    如果已经建立了连接，但是客户端突然出现故障了怎么办？
+    
+        TCP设有一个保活计时器，客户端如果出现故障，服务器不能一直等下去，白白浪费资源。服务器每收到一次客户端的请求后都会重新复位这个计时器，时间通常是设置为2小时，若两小时还没有收到客户端的任何数据，服务器就会发送一个探测报文段，以后每隔75秒钟发送一次。若一连发送10个探测报文仍然没反应，服务器就认为客户端出了故障，接着就关闭连接。
 
 
 TCP的TIME_WAIT状态
@@ -284,6 +316,15 @@ https://zhuanlan.zhihu.com/p/68052232
 https://zhuanlan.zhihu.com/p/73475227
 
     Kafka Zookeeper:
+
+
+    其它概念ZXID（zookeeper transaction id）：每个改变Zookeeper状态的操作都会形成一个对应的zxid，并记录到transaction log中。 这个值越大，表示更新越新myid：服务器SID，一个数字,通过配置文件配置，唯一SID：服务器的唯一标识成为Leader的必要条件： Leader要具有最高的zxid；当集群的规模是n时，集群中大多数的机器（至少n/2+1）得到响应并follow选出的Leader。心跳机制：Leader与Follower利用PING来感知对方的是否存活，当Leader无法相应PING时，将重新发起Leader选举。选举有两种情况，一是服务器启动的投票，二是运行期间的投票。服务器启动时期的Leader选举1.每个服务器发送一个投票(SID,ZXID)其中sid是自己的myid，初始阶段都将自己投为Leader。2.接收来自其他服务器的投票。集群的每个服务器收到投票后，首先判断该投票的有效性，如检查是否是本轮投票、是否来自LOOKING状态的服务器。3.处理投票针对每个投票都按以下规则与自己的投票PK，PK后依据情况是否更新投票，再发送给其他机器。a.优先检查ZXID，ZXID较大者优先为Leaderb.如果ZXID相同，检查SID，SID较大者优先为Leader5.统计投票每次投票后，服务器统计所有投票，判断是否有过半的机器收到相同的投票，如果某个投票达到一半的要求，则认为该投票提出者可以成为Leader。6.改变服务器状态一旦确定了Leader，每个服务器都更新自己的状态，Leader变更为Leading，Follower变更为Following 正常情况下一旦选出一个Leader则一直会保持，除非Leader服务器宕掉，则再进行重新选举。
+
+
+
+
+
+
         领导者选举的过程中至少要有三台zkServer投了同一个zkServer，才会符合过半机制，才能选出来一个Leader。
 
 
@@ -330,10 +371,96 @@ https://zhuanlan.zhihu.com/p/73475227
     多个消费者可以组成一个消费者组（consumer group），每个消费者组都有一个组id！同一个消费组者的消费者可以消费同一topic下不同分区的数据，但是不会组内多个消费者消费同一分区的数据！！！是不是有点绕。我们看下图：
 
 
+
+    消息顺序
+
+    Kafka分布式的单位是partition，同一个partition用一个write ahead log组织，所以可以保证FIFO的顺序。不同partition之间不能保证顺序。但是绝大多数用户都可以通过message key来定义，因为同一个key的message可以保证只发送到同一个partition，比如说key是user id，table row id等等，所以同一个user或者同一个record的消息永远只会发送到同一个partition上，保证了同一个user或record的顺序。当然，如果你有key skewness 就有些麻烦，需要特殊处理
+
+
+    max.in.flight.requests.per.connection该参数指定了生产者在收到服务器响应之前可以发送多少个消息。它的值越高，就会占用越多的内存，不过也会提升吞吐量。把它设为 1 可以保证消息是按照发送的顺序写入服务器的，即使发生了重试。这种场景下无法保障单一partition的有序，一般来说要保障消息的有序性，对于消息的可靠性也是有要求的，所以一般retries可以设置为大于0，但是max.in.flight.requests.per.connection设置为1即可，不过这样就有一个问题，导致了消息的吞吐量大大降低。
+
+    场景二：需要提升吞吐量max.in.flight.requests.per.connection设置大于1此场景下业务要保障消息的吞吐量，那么max.in.flight.requests.per.connection必然就会选择更大的一个阈值，但是此场景还能保障消息有序性吗？答案是肯定的，可以设置enable.idempotence=true，开启生产者的幂等生产，可以解决顺序性问题，并且允许max.in.flight.requests.per.connection设置大于1
+
+
+    https://blog.csdn.net/linke1183982890/article/details/83303003
+
+
+
+    生产者幂等性
+    
+        引入幂等性引入目的：生产者重复生产消息。生产者进行retry会产生重试时，会重复产生消息。有了幂等性之后，在进行retry重试时，只会生成一个消息。1.2 幂等性实现1.2.1 PID 和 Sequence Number为了实现Producer的幂等性，Kafka引入了Producer ID（即PID）和Sequence Number。PID。每个新的Producer在初始化的时候会被分配一个唯一的PID，这个PID对用户是不可见的。Sequence Numbler。（对于每个PID，该Producer发送数据的每个<Topic, Partition>都对应一个从0开始单调递增的Sequence Number。Broker端在缓存中保存了这seq number，对于接收的每条消息，如果其序号比Broker缓存中序号大于1则接受它，否则将其丢弃。这样就可以实现了消息重复提交了。但是，只能保证单个Producer对于同一个<Topic, Partition>的Exactly Once语义。不能保证同一个Producer一个topic不同的partion幂等。
+
+    kafka事务属性是指一系列的生产者生产消息和消费者提交偏移量的操作在一个事务，或者说是是一个原子操作），同时成功或者失败。
+
+    在事务属性之前先引入了生产者幂等性，它的作用为：（1）生产者多次发送消息可以封装成一个原子操作，要么都成功，要么失败（2）consumer-transform-producer模式下，因为消费者提交偏移量出现问题，导致在重复消费消息时，生产者重复生产消息。需要将这个模式下消费者提交偏移量操作和生成者一系列生成消息的操作封装成一个原子操作。消费者提交偏移量导致重复消费消息的场景：消费者在消费消息完成提交偏移量o2之前挂掉了（假设它最近提交的偏移量是o1），此时执行再均衡时，其它消费者会重复消费消息(o1到o2之间的消息）。
+
+
+
+    如果所有的消费者都隶属于同一个消费组，那么所有的消息都会被均衡地投递给每一个消费者，即每条消息只会被一个消费者处理，这就相当于点对点模式的应用。如果所有的消费者都隶属于不同的消费组，那么所有的消息都会被广播给所有的消费者，即每条消息会被所有的消费者处理，这就相当于发布/订阅模式的应用。
+
+
+
+
+
+
+
+
+
     kafka分布式的情况下，如何保证消息的顺序?
 
     Kafka 中发送1条消息的时候，可以指定(topic, partition, key) 3个参数。partiton 和 key 是可选的。如果你指定了 partition，那就是所有消息发往同1个 partition，就是有序的。并且在消费端，Kafka 保证，1个 partition 只能被1个 consumer 消费。或者你指定 key（比如 order id），具有同1个 key 的所有消息，会发往同1个 partition。也是有序的。
 
+    kafka 消息丢失 https://zhuanlan.zhihu.com/p/354772550
+
+
+    选举
+
+    3 Kafka Partition选主机制
+
+        3.1 优势
+
+        Kafka的Leader Election方案解决了上述问题，它在所有broker中选出一个controller，所有Partition的Leader选举都由controller决定。
+        controller会将Leader的改变直接通过RPC的方式(比ZooKeeper Queue的方式更高效)通知需为此作为响应的Broker。
+
+        没有使用 zk，所以无 2.3 问题；也没有注册 watch无 2.2 问题
+        leader 失败了，就通过 controller 继续重新选举即可，所以克服所有问题。
+
+        3.2 Kafka集群controller的选举
+
+        每个Broker都会在Controller Path (/controller)上注册一个Watch。 当前
+        Controller失败时，对应的Controller Path会自动消失(因为它是ephemeral
+        Node)，此时该Watch被fire，所有“活” 着的Broker都会去竞选成为新的
+        Controller (创建新的Controller Path)，但是只会有一个竞选成功(这点由
+        Zookeeper保证)。竞选成功者即为新的Leader，竞选失败者则重新在新的
+        Controller Path上注册Watch。因为Zookeeper的Watch是一次性的， 被fire一次
+        之后即失效，所以需要重新注册。
+
+        3.3 Kafka partition leader的选举
+
+        由controller执行：
+
+
+
+        从Zookeeper中读取当前分区的所有ISR(in-sync replicas)集合
+        调用配置的分区选择算法选择分区的leader
+
+
+
+生成一个全局唯一的id生成接口
+
+https://www.zhihu.com/search?type=content&q=%E7%94%9F%E6%88%90%E4%B8%80%E4%B8%AA%E5%85%A8%E5%B1%80%E5%94%AF%E4%B8%80%E7%9A%84id%E7%94%9F%E6%88%90%E6%8E%A5%E5%8F%A3
+
+
+
+
 
 有做过什么项目？做了什么？
 有什么想要问我的吗？
+
+缓存更新：
+https://www.zhihu.com/search?type=content&q=%E7%BC%93%E5%AD%98%20%E6%95%B0%E6%8D%AE%E5%BA%93%20%E6%9B%B4%E6%96%B0
+
+
+
+GC:
+https://www.zhihu.com/search?type=content&q=java%20gc

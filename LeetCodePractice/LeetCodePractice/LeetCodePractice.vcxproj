@@ -247,6 +247,7 @@
     <ClCompile Include="Q837_New21Game.cpp" />
     <ClCompile Include="Q838_PushDominoes.cpp" />
     <ClCompile Include="Q847_ShortestPathVisitingAllNodes.cpp" />
+    <ClCompile Include="Q84_LargestRectangleInHistogram.cpp" />
     <ClCompile Include="Q864_ShortestPathToGetAllKeys.cpp" />
     <ClCompile Include="Q871_MinimumNumberOfRefuelingStops.cpp" />
     <ClCompile Include="Q873_LengthOfLongestFibonacciSubsequence.cpp" />

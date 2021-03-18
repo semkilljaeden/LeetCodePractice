@@ -279,6 +279,7 @@
     <ClCompile Include="Q1416_RestoreTheArray.cpp" />
     <ClCompile Include="Q1631_PathWithMinimum Effort.cpp" />
     <ClCompile Include="Q336_PalindromePairs.cpp" />
+    <ClCompile Include="Q84_LargestRectangleInHistogram.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

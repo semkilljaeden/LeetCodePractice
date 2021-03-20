@@ -1,4 +1,26 @@
 #include "LCHeader.h"
+
+class Solution {
+public:
+    void nextPermutation(vector<int>& nums) {
+        for (int i = nums.size() - 2; i >= 0; i--) {
+            if (nums[i] < nums[i + 1]) {
+                int pos = i + 1;
+                while (pos < nums.size() && nums[i] < nums[pos]) {
+                    pos++;
+                }
+                pos--;
+                swap(nums[i], nums[pos]);
+                sort(nums.begin() + i + 1, nums.end());
+                return;
+            }
+        }
+        sort(nums.begin(), nums.end());
+    }
+};
+
+
+
 class Solution {
 public:
     void nextPermutation(vector<int>& nums) {

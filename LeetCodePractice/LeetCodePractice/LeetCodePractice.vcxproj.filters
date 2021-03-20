@@ -280,6 +280,15 @@
     <ClCompile Include="Q1631_PathWithMinimum Effort.cpp" />
     <ClCompile Include="Q336_PalindromePairs.cpp" />
     <ClCompile Include="Q84_LargestRectangleInHistogram.cpp" />
+    <ClCompile Include="Q207_CourseSchedule.cpp" />
+    <ClCompile Include="Q1036_EscapeALargeMaze.cpp" />
+    <ClCompile Include="Q913_CatAndMouse.cpp" />
+    <ClCompile Include="Q1728_CatAndMouseII.cpp" />
+    <ClCompile Include="Q994_RottingOranges.cpp" />
+    <ClCompile Include="Q719_FindKthSmallestPairDistance.cpp" />
+    <ClCompile Include="Q32_LongestValidParentheses.cpp" />
+    <ClCompile Include="Q726_NumberOfAtoms.cpp" />
+    <ClCompile Include="Q25_ReverseNodesInKGroup.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

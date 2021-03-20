@@ -2,7 +2,44 @@
 #include<unordered_map>
 #include<memory>
 #include<cmath>
+#include<algorithm>
 using namespace std;
+
+
+
+
+class Solution {
+public:
+    int longestConsecutive(vector<int>& nums) {
+        if (nums.size() == 0) {
+            return 0;
+        }
+        sort(nums.begin(), nums.end());
+        int l = 0;
+        int r = 1;
+        int prev = nums[0];
+        int max = 1;
+        int tmp = 1;
+        for (; r < nums.size(); r++) {
+            if (nums[r] == prev) {
+
+            }
+            else if (nums[r] - prev != 1) {
+                max = std::max(max, tmp);
+                l = r;
+                tmp = 1;
+            }
+            else if (nums[r] - prev == 1) {
+                tmp++;
+            }
+            prev = nums[r];
+        }
+        max = std::max(max, tmp);
+        return max;
+    }
+};
+
+
 //11:35 to 12:08. best O(1) solution
 /*
 Runtime: 12 ms, faster than 94.49% of C++ online submissions for Longest Consecutive Sequence.

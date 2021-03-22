@@ -5,6 +5,64 @@
 #include<utility>
 using namespace std;
 
+/*
+Runtime: 0 ms, faster than 100.00% of C++ online submissions for Word Break II.
+Memory Usage: 7.9 MB, less than 100.00% of C++ online submissions for Word Break II.
+*/
+
+
+class Solution {//2:41
+public:
+    vector<string> wordBreak(string s, vector<string>& wordDict) {
+        int n = s.size();
+        vector<vector<int>> r;
+        unordered_set<string> dict(wordDict.cbegin(), wordDict.cend());
+        vector<int> pos;
+        dp(s, dict, 0, 0, pos, r);
+        vector<string> result;
+        for (auto& x : r) {
+            string tmp;
+            int idx = 0;
+            for (auto& y : x) {
+                tmp += s.substr(idx, y - idx + 1);
+                tmp += " ";
+                idx = y + 1;
+            }
+            tmp.pop_back();
+            result.push_back(tmp);
+        }
+        return result;
+    }
+
+    void dp(string& s, unordered_set<string>& wordDict, int idx, int prev, vector<int>& position, vector<vector<int>>& result) {
+        if (idx >= s.size()) {
+            return;
+        }
+        if (idx == s.size() - 1) {
+            if (wordDict.count(s.substr(prev, idx - prev + 1)) > 0) {
+                position.push_back(idx);
+                result.push_back(position);
+                position.pop_back();
+                return;
+            }
+        }
+        if (wordDict.count(s.substr(prev, idx - prev + 1)) > 0) {
+            position.push_back(idx);
+            dp(s, wordDict, idx + 1, idx + 1, position, result);
+            position.pop_back();
+        }
+        dp(s, wordDict, idx + 1, prev, position, result);
+        return;
+    }
+};
+
+
+
+
+
+
+
+
 
 //2/18 TLE
 class Solution {

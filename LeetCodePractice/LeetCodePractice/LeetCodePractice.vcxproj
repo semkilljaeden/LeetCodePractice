@@ -18,6 +18,7 @@
     <ClCompile Include="NodeRandom.cpp" />
     <ClCompile Include="Q1036_EscapeALargeMaze.cpp" />
     <ClCompile Include="Q1155_NumberOfDiceRollsWithTargetSum.cpp" />
+    <ClCompile Include="Q1293_ShortestPathInAGridWithObstaclesElimination.cpp" />
     <ClCompile Include="Q1296_DivideArrayInSetsOfKConsecutiveNumbers.cpp" />
     <ClCompile Include="Q1352_ProductOfTheLastKNumbers.cpp" />
     <ClCompile Include="Q1416_RestoreTheArray.cpp" />
@@ -26,9 +27,11 @@
     <ClCompile Include="Q1728_CatAndMouseII.cpp" />
     <ClCompile Include="Q207_CourseSchedule.cpp" />
     <ClCompile Include="Q25_ReverseNodesInKGroup.cpp" />
+    <ClCompile Include="Q269_AlienDictionary.cpp" />
     <ClCompile Include="Q32_LongestValidParentheses.cpp" />
     <ClCompile Include="Q336_PalindromePairs.cpp" />
     <ClCompile Include="Q435_Non-OverlappingIntervals.cpp" />
+    <ClCompile Include="Q518_CoinChange2.cpp" />
     <ClCompile Include="Q528_RandomPickWithWeight.cpp" />
     <ClCompile Include="Q567_PermutationInString.cpp" />
     <ClCompile Include="Q611_ValidTriangleNumber.cpp" />

@@ -292,6 +292,23 @@
     <ClCompile Include="Q1293_ShortestPathInAGridWithObstaclesElimination.cpp" />
     <ClCompile Include="Q518_CoinChange2.cpp" />
     <ClCompile Include="Q269_AlienDictionary.cpp" />
+    <ClCompile Include="Q1202_SmallestStringWithSwaps.cpp" />
+    <ClCompile Include="Q834_SumOfDistancesInTree.cpp" />
+    <ClCompile Include="Q958_CheckCompletenessOfABinaryTree.cpp" />
+    <ClCompile Include="Q676_ImplementMagicDictionary.cpp" />
+    <ClCompile Include="Q863_AllNodesDistanceKInBinaryTree.cpp" />
+    <ClCompile Include="Q232_ImplementQueueUsingStack.cpp" />
+    <ClCompile Include="Q380_InsertDeleteGetRandomO(1).cpp" />
+    <ClCompile Include="Q314_BinaryTreeVerticalOrderTraversal.cpp" />
+    <ClCompile Include="Q856_ScoreOfParentheses.cpp" />
+    <ClCompile Include="Q454_4SumII.cpp" />
+    <ClCompile Include="Q489_RobotRoomCleaner.cpp" />
+    <ClCompile Include="Q678_ValidParenthesisString.cpp" />
+    <ClCompile Include="Q1047_RemoveAllAdjacentDuplicatesInString.cpp" />
+    <ClCompile Include="Q456_132Pattern.cpp" />
+    <ClCompile Include="Q542_01Matrix.cpp" />
+    <ClCompile Include="Q1081_SmallestSubsequenceOfDistinctCharacters.cpp" />
+    <ClCompile Include="Q91_DecodeWays.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

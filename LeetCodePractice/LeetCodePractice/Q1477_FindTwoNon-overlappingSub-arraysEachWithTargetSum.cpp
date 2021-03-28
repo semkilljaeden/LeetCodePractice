@@ -1,5 +1,45 @@
 #include "LCHeader.h"
 #include <queue>
+
+//better solution, got idea of 132 problem
+
+
+class Solution {//8:45 8:53
+public:
+    int minSumOfLengths(vector<int>& arr, int target) {
+        int sum = 0;
+        int n = arr.size();
+        int end = 0;
+        vector<int> tmp(n, 0);
+        int prev = INT_MAX;
+        int result = INT_MAX;
+        int k = target;
+        for (int i = 0; i < n; i++) {
+            sum += arr[i];
+            while (sum > k && end < i) {
+                sum -= arr[end];
+                end++;
+            }
+            if (sum == k) {
+                tmp[i] = std::min(prev, i - end + 1);
+                if (end > 0 && tmp[end - 1] != INT_MAX) {
+                    result = std::min(result, i - end + 1 + tmp[end - 1]);
+                }
+            }
+            else {
+                tmp[i] = prev;
+            }
+            prev = tmp[i];
+        }
+        if (result == INT_MAX) {
+            result = -1;
+        }
+        return result;
+    }
+};
+
+
+
 //5:31 6:20 WTF, the boundary check is so tedious
 
 class Solution {

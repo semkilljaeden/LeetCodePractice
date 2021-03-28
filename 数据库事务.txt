@@ -1,0 +1,58 @@
+
+
+事务隔离：
+    ACID: Atomic, Consistency, Isolation, Durablity
+
+    try to resolve read-write conflict.
+
+    1. read uncommited - only write lock, another transaction can read the data that has not been commited
+    2. read commited - has version control, only can read the version number associated with the transaction
+    3. repeatable reading - record lock + gap lock
+    4. serializable
+
+    隔离等级对加锁的影响MySQL 的隔离等级对加锁有影响，所以在分析具体加锁场景时，首先要确定当前的隔离等级。
+    读未提交（Read Uncommitted 后续简称 RU）：可以读到未提交的读，基本上不会使用该隔离等级，所以暂时忽略。只有写锁
+    读已提交（Read Committed 后续简称 RC）：MVCC 版本号控制读并发
+    可重复读（Repeatable Read 后续简称 RR）：MVCC + 加间隙锁， 防止插入读取中的行， 解决幻读
+    序列化（Serializable）：从 MVCC 并发控制退化到基于锁的并发控制，不存在快照读，都是当前读，并发效率急剧下降，不建议使用。Two phase lock
+    这里说明一下，RC 总是读取记录的最新版本，而 RR 是读取该记录事务开始时的那个版本，虽然这两种读取的版本不同，但是都是快照数据，并不会被写操作阻塞，所以这种读操作称为 快照读（Snapshot Read）
+
+    MySQL 还提供了另一种读取方式叫当前读（Current Read），它读的不再是数据的快照版本，而是数据的最新版本，并会对数据加锁，
+    根据语句和加锁的不同，又分成三种情况：SELECT ... LOCK IN SHARE MODE：加共享(S)锁SELECT ... FOR UPDATE：加排他(X)
+    锁INSERT / UPDATE / DELETE：加排他(X)锁当前读在 RR 和 RC 两种隔离级别下的实现也是不一样的：RC 只加记录锁，RR 除了加记录锁，还会加间隙锁，用于解决幻读问题。
+
+
+Lock:
+table lock, row lock --> can use intent lock to indicate that this table has a row lock instead of searching every row
+读锁 写锁
+
+行锁 表锁
+
+记录锁 间隙锁
+
+
+索引的实现方式有哪些？(B+树索引、位图索引、哈希索引)
+
+    哈希索引不适用的场景：不支持范围查询,不支持索引,完成排序不支持联合索引的最左前缀匹配规则通常，在HEAP表中，如果存储的数据重复度很低（也就是说基数很大），对该列数据以等值查询为主，没有范围查询、没有排序的时候，特别适合采用哈希索引
+    B+树索引结构适用于绝大多数场景，像下面这种场景用哈希索引才更有优势：
+
+
+讲一下B+树的实现原理，为什么要用B+树？
+
+    数据记录本身被存于主索引（一颗B+Tree）的叶子节点上，这就要求同一个叶子节点内（大小为一个内存页或磁盘页）
+    的各条数据记录按主键顺序存放因此每当有一条新的记录插入时，MySQL会根据其主键将其插入适当的节点和位置，如果页面达到装载因子（InnoDB默认为15/16），则开辟一个新的页（节点）3、
+    
+    如果表使用自增主键，那么每次插入新的记录，记录就会顺序添加到当前索引节点的后续位置，
+    当一页写满，就会自动开辟一个新的页4、如果使用非自增主键（如果身份证号或学号等），
+    由于每次插入主键的值近似于随机，因此每次新纪录都要被插到现有索引页得中间某个位置此时MySQL不得不为了将新记录插到合适位置而移动数据，
+    甚至目标页面可能已经被回写到磁盘上而从缓存中清掉，此时又要从磁盘上读回来，这增加了很多开销同时频繁的移动、分页操作造成了大量的碎片，
+    得到了不够紧凑的索引结构，后续不得不通过OPTIMIZE TABLE来重建表并优化填充页面。
+
+
+NoSQL vs SQL:
+
+    1、Data相关性极低
+    Data非常不relational (require no join or few joins)，这时用SQL 就有点浪费，可能会有不必要的overhead。
+
+    2、Data相关性极高
+    这时用CF NoSQL可能要处理大量的de-normalization，虽然disk便宜，但duplicated data太多的话可能也会爆容量。而且update时要处理de-norm data间consistency的问题。

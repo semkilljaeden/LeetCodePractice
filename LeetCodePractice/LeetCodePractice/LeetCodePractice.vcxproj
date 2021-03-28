@@ -30,6 +30,7 @@
     <ClCompile Include="Q1728_CatAndMouseII.cpp" />
     <ClCompile Include="Q207_CourseSchedule.cpp" />
     <ClCompile Include="Q232_ImplementQueueUsingStack.cpp" />
+    <ClCompile Include="Q253_MeetingRoomsII.cpp" />
     <ClCompile Include="Q25_ReverseNodesInKGroup.cpp" />
     <ClCompile Include="Q269_AlienDictionary.cpp" />
     <ClCompile Include="Q314_BinaryTreeVerticalOrderTraversal.cpp" />
@@ -37,6 +38,7 @@
     <ClCompile Include="Q336_PalindromePairs.cpp" />
     <ClCompile Include="Q380_InsertDeleteGetRandomO(1).cpp" />
     <ClCompile Include="Q435_Non-OverlappingIntervals.cpp" />
+    <ClCompile Include="Q43_MultiplyStrings.cpp" />
     <ClCompile Include="Q454_4SumII.cpp" />
     <ClCompile Include="Q456_132Pattern.cpp" />
     <ClCompile Include="Q489_RobotRoomCleaner.cpp" />
@@ -272,6 +274,7 @@
     <ClCompile Include="Q847_ShortestPathVisitingAllNodes.cpp" />
     <ClCompile Include="Q84_LargestRectangleInHistogram.cpp" />
     <ClCompile Include="Q856_ScoreOfParentheses.cpp" />
+    <ClCompile Include="Q85_MaximalRectangle.cpp" />
     <ClCompile Include="Q863_AllNodesDistanceKInBinaryTree.cpp" />
     <ClCompile Include="Q864_ShortestPathToGetAllKeys.cpp" />
     <ClCompile Include="Q871_MinimumNumberOfRefuelingStops.cpp" />
@@ -306,6 +309,7 @@
     <ClCompile Include="Q987_VerticalOrderTraversalOfABinaryTree.cpp" />
     <ClCompile Include="Q992_SubarraysWithKDifferentIntegers.cpp" />
     <ClCompile Include="Q994_RottingOranges.cpp" />
+    <ClCompile Include="Q99_RecoverBinarySearchTree.cpp" />
     <ClCompile Include="TreeNode.cpp" />
   </ItemGroup>
   <ItemGroup>

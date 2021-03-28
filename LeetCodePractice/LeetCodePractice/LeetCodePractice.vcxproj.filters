@@ -309,6 +309,10 @@
     <ClCompile Include="Q542_01Matrix.cpp" />
     <ClCompile Include="Q1081_SmallestSubsequenceOfDistinctCharacters.cpp" />
     <ClCompile Include="Q91_DecodeWays.cpp" />
+    <ClCompile Include="Q99_RecoverBinarySearchTree.cpp" />
+    <ClCompile Include="Q43_MultiplyStrings.cpp" />
+    <ClCompile Include="Q85_MaximalRectangle.cpp" />
+    <ClCompile Include="Q253_MeetingRoomsII.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

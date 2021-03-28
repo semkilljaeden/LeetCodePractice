@@ -1,6 +1,86 @@
 #include<vector>
 #include<string>
 using namespace std;
+
+//cleaner code
+
+
+class Solution {
+public:
+    int compareVersion(string version1, string version2) {
+        return c(version1, version2, 0, 0);
+    }
+
+    int c(const string& v1, const string& v2, int l, int r) {
+        if (l == v1.size()) {
+            for (; r < v2.size(); r++) {
+                if (v2[r] != '.' && v2[r] != '0') {
+                    return -1;
+                }
+            }
+            return 0;
+        }
+
+        else if (r == v2.size()) {
+            for (; l < v1.size(); l++) {
+                if (v1[l] != '.' && v1[l] != '0') {
+                    return 1;
+                }
+            }
+            return 0;
+        }
+        if (v1[l] == '.') {
+            l++;
+        }
+        if (v2[r] == '.') {
+            r++;
+        }
+        int l2 = l;
+        while (v1[l2] != '.' && l2 < v1.size()) {
+            l2++;
+        }
+        int r2 = r;
+        while (v2[r2] != '.' && r2 < v2.size()) {
+            r2++;
+        }
+        int tmp = com(v1, v2, l, l2, r, r2);
+        if (tmp != 0) {
+            return tmp;
+        }
+        return c(v1, v2, l2, r2);
+    }
+
+    inline int com(const string& v1, const string& v2, int l, int l2, int r, int r2) {
+        while (l < l2 && v1[l] == '0') {
+            l++;
+        }
+        while (r < r2&& v2[r] == '0') {
+            r++;
+        }
+        int lsize = l2 - l;
+        int rsize = r2 - r;
+        if (lsize != rsize) {
+            return lsize > rsize ? 1 : -1;
+        }
+
+        while (l < l2 && r < r2) {
+            if (v1[l] != v2[r]) {
+                return v1[l] > v2[r] ? 1 : -1;
+            }
+            l++;
+            r++;
+        }
+        return 0;
+    }
+
+};
+
+
+
+
+
+
+
 //4:56 5:40 too slow, unfamiliar with c++ string
 /*
 Runtime: 0 ms, faster than 100.00% of C++ online submissions for Compare Version Numbers.

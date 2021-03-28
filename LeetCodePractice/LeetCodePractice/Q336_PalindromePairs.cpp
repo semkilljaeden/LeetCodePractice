@@ -1,4 +1,67 @@
 #include "LCHeader.h"
+//improved version//2:53 3:17
+
+
+class Solution {
+public:
+    vector<vector<int>> palindromePairs(vector<string>& words) {
+        unordered_map<string, int> map;
+        for (int i = 0; i < words.size(); i++) {
+            auto tmp = words[i];
+            reverse(tmp.begin(), tmp.end());
+            map[tmp] = i;
+        }
+        vector<vector<int>> result;
+        for (int j = 0; j < words.size(); j++) {
+            auto& x = words[j];
+            if (x == "") {
+                continue;
+            }
+            for (int i = 0; i < x.size() - 1; i++) {
+                auto tmp = x.substr(i + 1, x.size() - i - 1);
+                if (isPal(x, 0, i) && map.count(tmp) > 0) {
+                    result.push_back({ map[tmp], j });
+                }
+            }
+            for (int i = 1; i < x.size(); i++) {
+                auto tmp = x.substr(0, i);
+                if (isPal(x, i, x.size() - 1) && map.count(tmp) > 0) {
+                    result.push_back({ j, map[tmp] });
+                }
+            }
+            if (isPal(x, 0, x.size() - 1) && map.count("") > 0) {
+                result.push_back({ j, map[""] });
+                result.push_back({ map[""], j });
+            }
+            auto tmp = x;
+            reverse(tmp.begin(), tmp.end());
+            if (tmp != x && map.count(x) > 0) {
+                result.push_back({ j, map[x] });
+            }
+        }
+        return result;
+    }
+
+
+
+    inline bool isPal(const string& s, int i, int j) {
+        if (s.size() == 0) {
+            return false;
+        }
+        while (i <= j) {
+            if (s[i] != s[j]) {
+                return false;
+            }
+            i++;
+            j--;
+        }
+        return true;
+    }
+};
+
+
+
+
 //10:18 10:55 TLE not TLE good solution but with bug
 //11:43 fucking stupid bug. 
 /*

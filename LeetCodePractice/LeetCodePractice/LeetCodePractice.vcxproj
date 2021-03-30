@@ -33,6 +33,7 @@
     <ClCompile Include="Q253_MeetingRoomsII.cpp" />
     <ClCompile Include="Q25_ReverseNodesInKGroup.cpp" />
     <ClCompile Include="Q269_AlienDictionary.cpp" />
+    <ClCompile Include="Q282_ExpressionAddOperators.cpp" />
     <ClCompile Include="Q314_BinaryTreeVerticalOrderTraversal.cpp" />
     <ClCompile Include="Q32_LongestValidParentheses.cpp" />
     <ClCompile Include="Q336_PalindromePairs.cpp" />
@@ -237,6 +238,7 @@
     <ClCompile Include="Q651_4KeysKeyBoard.cpp" />
     <ClCompile Include="Q656_CoinPath.cpp" />
     <ClCompile Include="Q664_StrangePrinter.cpp" />
+    <ClCompile Include="Q670_MaximumSwap.cpp" />
     <ClCompile Include="Q673_NumberOfLongestIncreasingSubsequence.cpp" />
     <ClCompile Include="Q676_ImplementMagicDictionary.cpp" />
     <ClCompile Include="Q678_ValidParenthesisString.cpp" />
@@ -259,6 +261,7 @@
     <ClCompile Include="Q764_LargestPlusSign.cpp" />
     <ClCompile Include="Q770_BasicCalculatorIV.cpp" />
     <ClCompile Include="Q772_BasicCalculatorIII.cpp" />
+    <ClCompile Include="Q777_SwapAdjacentInLRString.cpp" />
     <ClCompile Include="Q785_IsGraphBipartite.cpp" />
     <ClCompile Include="Q787_CheapestFlightsWithinKStops.cpp" />
     <ClCompile Include="Q78_LongestTurbulentSubarray.cpp" />

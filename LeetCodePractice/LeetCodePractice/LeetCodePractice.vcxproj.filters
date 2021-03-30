@@ -313,6 +313,9 @@
     <ClCompile Include="Q43_MultiplyStrings.cpp" />
     <ClCompile Include="Q85_MaximalRectangle.cpp" />
     <ClCompile Include="Q253_MeetingRoomsII.cpp" />
+    <ClCompile Include="Q777_SwapAdjacentInLRString.cpp" />
+    <ClCompile Include="Q670_MaximumSwap.cpp" />
+    <ClCompile Include="Q282_ExpressionAddOperators.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

@@ -1,5 +1,62 @@
 #include "LCHeader.h"
 #include "queue"
+
+/**
+
+Runtime: 48 ms, faster than 80.60% of C++ online submissions for Minimum Knight Moves.
+Memory Usage: 33.4 MB, less than 59.96% of C++ online submissions for Minimum Knight Moves.
+*/
+
+
+class Solution {//10:56 11:26
+public:
+    int minKnightMoves(int x, int y) {
+        int xx = abs(x) + 10;
+        int yy = abs(y) + 10;
+        queue<pair<int, int>> q;
+        q.push(make_pair(10, 10));
+        vector<vector<int>> directions{ {2, 1},
+                                        {2, -1},
+                                        {-2, 1},
+                                        {-2, -1},
+                                        {1, 2},
+                                        {-1, 2},
+                                       {1, -2},
+                                        {-1, -2} };
+        vector<vector<int>> visited(330, vector<int>(330, -1));
+        int level = 0;
+        while (q.size() > 0) {
+            int size = q.size();
+            for (int i = 0; i < size; i++) {
+                auto x = q.front();
+                q.pop();
+                if (x.first == xx && x.second == yy) {
+                    return level;
+                }
+                for (auto& y : directions) {
+                    int r = x.first + y[0];
+                    int c = x.second + y[1];
+                    if (r < 0 || c < 0 || r + c > 320 || r > xx + 5 || c > yy + 5) {
+                        continue;
+                    }
+                    if (visited[r][c] != -1) {
+                        continue;
+                    }
+                    visited[r][c] = 1;
+                    q.push(make_pair(r, c));
+                }
+            }
+            level++;
+        }
+        return 0;
+    }
+};
+
+
+
+
+
+
 //2:13 2:44 TLE need to limit the solutio to one qudrant
 class Solution {
 public:

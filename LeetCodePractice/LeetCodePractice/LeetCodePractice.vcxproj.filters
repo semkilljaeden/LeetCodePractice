@@ -316,6 +316,9 @@
     <ClCompile Include="Q777_SwapAdjacentInLRString.cpp" />
     <ClCompile Include="Q670_MaximumSwap.cpp" />
     <ClCompile Include="Q282_ExpressionAddOperators.cpp" />
+    <ClCompile Include="Q681_NextClosestTime.cpp" />
+    <ClCompile Include="Q395_longestSubstringWithAtLeastKRepeatingCharacters.cpp" />
+    <ClCompile Include="Q41_FirstMissingPositive.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

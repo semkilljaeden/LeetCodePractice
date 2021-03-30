@@ -38,6 +38,8 @@
     <ClCompile Include="Q32_LongestValidParentheses.cpp" />
     <ClCompile Include="Q336_PalindromePairs.cpp" />
     <ClCompile Include="Q380_InsertDeleteGetRandomO(1).cpp" />
+    <ClCompile Include="Q395_longestSubstringWithAtLeastKRepeatingCharacters.cpp" />
+    <ClCompile Include="Q41_FirstMissingPositive.cpp" />
     <ClCompile Include="Q435_Non-OverlappingIntervals.cpp" />
     <ClCompile Include="Q43_MultiplyStrings.cpp" />
     <ClCompile Include="Q454_4SumII.cpp" />
@@ -242,6 +244,7 @@
     <ClCompile Include="Q673_NumberOfLongestIncreasingSubsequence.cpp" />
     <ClCompile Include="Q676_ImplementMagicDictionary.cpp" />
     <ClCompile Include="Q678_ValidParenthesisString.cpp" />
+    <ClCompile Include="Q681_NextClosestTime.cpp" />
     <ClCompile Include="Q688_KnightProbabilityInChessboard.cpp" />
     <ClCompile Include="Q689_MaximumSumOf3Non-OverlappingSubarrays.cpp" />
     <ClCompile Include="Q691_StrickersToSpellWord.cpp" />

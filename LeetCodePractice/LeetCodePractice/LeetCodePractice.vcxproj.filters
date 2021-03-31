@@ -319,6 +319,7 @@
     <ClCompile Include="Q681_NextClosestTime.cpp" />
     <ClCompile Include="Q395_longestSubstringWithAtLeastKRepeatingCharacters.cpp" />
     <ClCompile Include="Q41_FirstMissingPositive.cpp" />
+    <ClCompile Include="Q143_ReorderList.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

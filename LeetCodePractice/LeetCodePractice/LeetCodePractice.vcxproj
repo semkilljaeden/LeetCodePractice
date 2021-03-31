@@ -25,6 +25,7 @@
     <ClCompile Include="Q1296_DivideArrayInSetsOfKConsecutiveNumbers.cpp" />
     <ClCompile Include="Q1352_ProductOfTheLastKNumbers.cpp" />
     <ClCompile Include="Q1416_RestoreTheArray.cpp" />
+    <ClCompile Include="Q143_ReorderList.cpp" />
     <ClCompile Include="Q1477_FindTwoNon-overlappingSub-arraysEachWithTargetSum.cpp" />
     <ClCompile Include="Q1631_PathWithMinimum Effort.cpp" />
     <ClCompile Include="Q1728_CatAndMouseII.cpp" />

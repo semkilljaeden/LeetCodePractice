@@ -320,6 +320,9 @@
     <ClCompile Include="Q395_longestSubstringWithAtLeastKRepeatingCharacters.cpp" />
     <ClCompile Include="Q41_FirstMissingPositive.cpp" />
     <ClCompile Include="Q143_ReorderList.cpp" />
+    <ClCompile Include="Q320_GeneralizedAbbreviation.cpp" />
+    <ClCompile Include="Q406_QueueReconstructionByHeight.cpp" />
+    <ClCompile Include="Q53_MaximumSubarray.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Utilities">

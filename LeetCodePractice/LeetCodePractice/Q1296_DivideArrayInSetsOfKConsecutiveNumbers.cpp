@@ -1,5 +1,44 @@
 #include "LCHeader.h"
 #include <queue>
+//10mins
+
+class Solution {//12:26
+public:
+    bool isPossibleDivide(vector<int>& nums, int k) {
+        unordered_map<int, int> map;
+        for (auto& x : nums) {
+            map[x]++;
+        }
+        vector<int> index;
+        index.reserve(map.size());
+        for (auto& x : map) {
+            index.push_back(x.first);
+        }
+        sort(index.begin(), index.end());
+        for (int i = 0; i < index.size(); i++) {
+            int& cur = index[i];
+            while (map.count(cur) > 0) {
+                for (int i = 0; i < k; i++) {
+                    if (map.count(cur + i) == 0) {
+                        return false;
+                    }
+                    map[cur + i]--;
+                    if (map[cur + i] == 0) {
+                        map.erase(cur + i);
+                    }
+                }
+            }
+        }
+        return true;
+    }
+};
+
+
+
+
+
+
+
 //4:58 5:13
 /*
 Runtime: 116 ms, faster than 97.66% of C++ online submissions for Divide Array in Sets of K Consecutive Numbers.

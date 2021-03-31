@@ -1,5 +1,42 @@
 #include<vector>
 using namespace std;
+
+
+class Solution {
+public:
+    int splitArray(vector<int>& nums, int m) {
+        vector<vector<int>> memo(nums.size(), vector<int>(m + 1, -1));
+        return dp(nums, m, 0, memo);
+    }
+
+    int dp(vector<int>& nums, int m, int idx, vector<vector<int>>& memo) {
+        if (idx == nums.size()) {
+            if (m != 0) {
+                return INT_MAX;
+            }
+            return 0;
+        }
+        if (m == 0) {
+            return INT_MAX;
+        }
+        if (memo[idx][m] != -1) {
+            return memo[idx][m];
+        }
+        int sum = 0;
+        int min = INT_MAX;
+        for (int i = idx; i < nums.size(); i++) {
+            sum += nums[i];
+            int tmp = std::max(sum, dp(nums, m - 1, i + 1, memo));
+            min = std::min(min, tmp);
+        }
+        return memo[idx][m] = min;
+    }
+};
+
+
+
+
+
 //11:12 save space to O(n)
 class Solution {
 public:

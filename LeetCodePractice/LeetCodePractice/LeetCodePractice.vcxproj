@@ -36,10 +36,12 @@
     <ClCompile Include="Q269_AlienDictionary.cpp" />
     <ClCompile Include="Q282_ExpressionAddOperators.cpp" />
     <ClCompile Include="Q314_BinaryTreeVerticalOrderTraversal.cpp" />
+    <ClCompile Include="Q320_GeneralizedAbbreviation.cpp" />
     <ClCompile Include="Q32_LongestValidParentheses.cpp" />
     <ClCompile Include="Q336_PalindromePairs.cpp" />
     <ClCompile Include="Q380_InsertDeleteGetRandomO(1).cpp" />
     <ClCompile Include="Q395_longestSubstringWithAtLeastKRepeatingCharacters.cpp" />
+    <ClCompile Include="Q406_QueueReconstructionByHeight.cpp" />
     <ClCompile Include="Q41_FirstMissingPositive.cpp" />
     <ClCompile Include="Q435_Non-OverlappingIntervals.cpp" />
     <ClCompile Include="Q43_MultiplyStrings.cpp" />
@@ -48,6 +50,7 @@
     <ClCompile Include="Q489_RobotRoomCleaner.cpp" />
     <ClCompile Include="Q518_CoinChange2.cpp" />
     <ClCompile Include="Q528_RandomPickWithWeight.cpp" />
+    <ClCompile Include="Q53_MaximumSubarray.cpp" />
     <ClCompile Include="Q542_01Matrix.cpp" />
     <ClCompile Include="Q567_PermutationInString.cpp" />
     <ClCompile Include="Q611_ValidTriangleNumber.cpp" />
